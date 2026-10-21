@@ -1,0 +1,13 @@
+{
+  "id": "wide-stage-background-v1",
+  "canvas": [2400, 1080],
+  "format": "PNG RGB or RGBA, fully opaque, sRGB",
+  "image_origin": [0, 0],
+  "image_rect_in_world_xywh": [-240, 0, 2400, 1080],
+  "visible_image_rect_16_9_xywh": [240, 0, 1920, 1080],
+  "world_viewport_16_9": [1920, 1080],
+  "world_camera_center": [960, 540],
+  "protagonist_feet_world": [760, 1000],
+  "protagonist_feet_image": [1000, 1000],
+  "qa": ["No painted musicians, text, menus or buttons", "Essential content fits central 16:9 crop", "Free floor at planned musician positions", "Movable and upgradeable objects remain separate", "Review with real HUD and both supported aspect ratios"]
+}

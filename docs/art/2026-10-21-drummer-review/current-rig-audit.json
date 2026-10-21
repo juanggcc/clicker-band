@@ -1,0 +1,166 @@
+{
+	"angle_ranges_deg": {
+		"L": {
+			"hand_relative_to_forearm_change_max": -2.95766315591228,
+			"hand_relative_to_forearm_change_min": -7.66639238199557,
+			"stick_screen_max": 72.3623776899976,
+			"stick_screen_min": 52.5307663405146
+		},
+		"R": {
+			"hand_relative_to_forearm_change_max": 1.81340924822286,
+			"hand_relative_to_forearm_change_min": -1.64357574073685,
+			"stick_screen_max": 11.2865734147443,
+			"stick_screen_min": 4.73542180487544
+		}
+	},
+	"engine": "4.7-stable (official)",
+	"max_bone_error_px": 0.00003814697265625,
+	"max_tip_error_px": 0.0000682393801980652,
+	"rest_geometry": {
+		"L": {
+			"forearm_px": 81.1541748046875,
+			"grip_to_tip_px": 57.2013969421387,
+			"tip_to_strike_target_px": 16.1245155334473,
+			"upper_arm_px": 125.399360656738,
+			"wrist_to_tip_px": 67.416618347168
+		},
+		"R": {
+			"forearm_px": 100.603179931641,
+			"grip_to_tip_px": 164.173690795898,
+			"tip_to_strike_target_px": 101.51847076416,
+			"upper_arm_px": 95.7548980712891,
+			"wrist_to_tip_px": 227.015411376953
+		}
+	},
+	"samples": 960,
+	"scope": "Current v1 pilot; measurements do not certify visual quality",
+	"simultaneous_impact_beat_1": {
+		"L": {
+			"elbow": [
+				516.048095703125,
+				512.139587402344
+			],
+			"grip": [
+				425.202362060547,
+				530.600402832031
+			],
+			"shoulder": [
+				474.0,
+				394.0
+			],
+			"tip": [
+				460.0,
+				576.0
+			],
+			"wrist": [
+				434.904144287109,
+				513.428466796875
+			]
+		},
+		"R": {
+			"elbow": [
+				209.755477905273,
+				468.495513916016
+			],
+			"grip": [
+				373.842712402344,
+				468.673919677734
+			],
+			"shoulder": [
+				266.0,
+				391.0
+			],
+			"tip": [
+				535.0,
+				500.0
+			],
+			"wrist": [
+				310.351593017578,
+				467.303039550781
+			]
+		}
+	},
+	"solver_failures": 0,
+	"sprites": [
+		{
+			"effective_z": 0,
+			"node": "/root/Drummer/Body/LegsSeat",
+			"texture": "res://assets/characters/drummer/legs_seat.png"
+		},
+		{
+			"effective_z": 1,
+			"node": "/root/Drummer/Body/Torso/Rig/BodyCore",
+			"texture": "res://assets/characters/drummer/body_core.png"
+		},
+		{
+			"effective_z": 2,
+			"node": "/root/Drummer/Body/Torso/Rig/UpperArmL/UpperArmL",
+			"texture": "res://assets/characters/drummer/upper_arm_L.png"
+		},
+		{
+			"effective_z": 4,
+			"node": "/root/Drummer/Body/Torso/Rig/ForearmL/ForearmL",
+			"texture": "res://assets/characters/drummer/forearm_L.png"
+		},
+		{
+			"effective_z": 5,
+			"node": "/root/Drummer/Body/Torso/Rig/HandL/StickL",
+			"texture": "res://assets/characters/drummer/stick_L.png"
+		},
+		{
+			"effective_z": 6,
+			"node": "/root/Drummer/Body/Torso/Rig/HandL/HandL",
+			"texture": "res://assets/characters/drummer/hand_L.png"
+		},
+		{
+			"effective_z": 2,
+			"node": "/root/Drummer/Body/Torso/Rig/UpperArmR/UpperArmR",
+			"texture": "res://assets/characters/drummer/upper_arm_R.png"
+		},
+		{
+			"effective_z": 7,
+			"node": "/root/Drummer/Body/Torso/Rig/ForearmR/ForearmR",
+			"texture": "res://assets/characters/drummer/forearm_R.png"
+		},
+		{
+			"effective_z": 8,
+			"node": "/root/Drummer/Body/Torso/Rig/HandR/StickR",
+			"texture": "res://assets/characters/drummer/stick_R.png"
+		},
+		{
+			"effective_z": 9,
+			"node": "/root/Drummer/Body/Torso/Rig/HandR/HandR",
+			"texture": "res://assets/characters/drummer/hand_R.png"
+		},
+		{
+			"effective_z": 1,
+			"node": "/root/Drummer/Body/ShoeL/ShoeL",
+			"texture": "res://assets/characters/drummer/shoe_L.png"
+		},
+		{
+			"effective_z": 1,
+			"node": "/root/Drummer/Body/ShoeR/ShoeR",
+			"texture": "res://assets/characters/drummer/shoe_R.png"
+		},
+		{
+			"effective_z": 3,
+			"node": "/root/Drummer/Body/KitFixed",
+			"texture": "res://assets/instruments/compact-drums/kit_fixed.png"
+		},
+		{
+			"effective_z": 6,
+			"node": "/root/Drummer/Body/HiHatFront",
+			"texture": "res://assets/instruments/compact-drums/hi_hat_front.png"
+		},
+		{
+			"effective_z": 4,
+			"node": "/root/Drummer/Body/CrashRide/CrashRide",
+			"texture": "res://assets/instruments/compact-drums/crash_ride.png"
+		},
+		{
+			"effective_z": 6,
+			"node": "/root/Drummer/Body/HiHatTop/HiHatTop",
+			"texture": "res://assets/instruments/compact-drums/hi_hat_top.png"
+		}
+	]
+}

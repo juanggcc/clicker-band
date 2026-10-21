@@ -1,0 +1,153 @@
+{
+  "family": "drummer-seated-v2",
+  "canvas": [
+    800,
+    1000
+  ],
+  "ground_origin": [
+    400,
+    920
+  ],
+  "axes": {
+    "x": "right",
+    "y": "down",
+    "positive_angle": "clockwise from +X"
+  },
+  "sides": "anatomical L/R; R is the crossing hi-hat arm",
+  "arms": {
+    "R": {
+      "shoulder": [
+        280,
+        376
+      ],
+      "elbow": [
+        304,
+        460
+      ],
+      "wrist": [
+        404,
+        469
+      ],
+      "grip": [
+        455,
+        491
+      ],
+      "tip": [
+        592,
+        539
+      ],
+      "butt": [
+        398,
+        485
+      ],
+      "rebound_forearm_deg": -9,
+      "rebound_wrist_deg": -4
+    },
+    "L": {
+      "shoulder": [
+        470,
+        385
+      ],
+      "elbow": [
+        512,
+        496
+      ],
+      "wrist": [
+        501,
+        520
+      ],
+      "grip": [
+        483,
+        548
+      ],
+      "tip": [
+        456,
+        608
+      ],
+      "butt": [
+        526,
+        526
+      ],
+      "rebound_forearm_deg": 12,
+      "rebound_wrist_deg": 8
+    }
+  },
+  "targets": {
+    "hi_hat": [
+      592,
+      539
+    ],
+    "snare": [
+      456,
+      608
+    ]
+  },
+  "cymbals": {
+    "hi_hat": [
+      638,
+      540
+    ],
+    "crash": [
+      204,
+      432
+    ]
+  },
+  "layers": [
+    {
+      "id": "body_core",
+      "owner": "skin",
+      "z": 0
+    },
+    {
+      "id": "kit_hardware",
+      "owner": "kit",
+      "z": 2
+    },
+    {
+      "id": "hi_hat_top",
+      "owner": "kit",
+      "z": 4
+    },
+    {
+      "id": "forearm_L",
+      "owner": "skin",
+      "z": 5
+    },
+    {
+      "id": "stick_L",
+      "owner": "skin",
+      "z": 6
+    },
+    {
+      "id": "hand_L",
+      "owner": "skin",
+      "z": 7
+    },
+    {
+      "id": "forearm_R",
+      "owner": "skin",
+      "z": 8
+    },
+    {
+      "id": "stick_R",
+      "owner": "skin",
+      "z": 9
+    },
+    {
+      "id": "hand_R",
+      "owner": "skin",
+      "z": 10
+    },
+    {
+      "id": "crash",
+      "owner": "kit",
+      "z": 11
+    }
+  ],
+  "motion": "Bounded FK from the drawn contact pose; shared hand/stick transform; stationary torso, sleeves, feet and drum hardware",
+  "supported": [
+    "crossed hi-hat eighth notes",
+    "snare backbeat",
+    "intensity 0..1"
+  ]
+}

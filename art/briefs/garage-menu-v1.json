@@ -1,0 +1,18 @@
+{
+  "id": "garage-menu-v1",
+  "kind": "background",
+  "subject": "An empty modest Spanish domestic garage adapted into an indie band's first rehearsal space. Recognizable real garage architecture: a broad closed ribbed metal up-and-over garage door at the back, a warm gray concrete floor, muted plaster and exposed brick, simple ceiling beams and wall-mounted electrical conduit. A small fixed workbench and restrained household storage stay at the far right rear edge. This is a humble believable garage, not a professional music studio or a bedroom.",
+  "composition": "Opaque landscape 2400x1080, ratio 20:9. Match the supplied bedroom's fixed stage camera, floor perspective, architectural scale and clean illustrated finish. Essential content fits the central IMAGE crop x=240..2159. The garage door forms a quiet cool mid-tone backdrop across the left-middle rear wall; its lower edge meets the floor around image y=730. Keep the broad concrete foreground clear from image x=600..1850 and y=730..1080. Protagonist feet at WORLD (760,1000) correspond to IMAGE (1000,1000), not image x=760. Leave a calm backdrop around that musician's whole silhouette, approximately IMAGE x=700..1300,y=180..1000. Allow a second musician around WORLD x=1300, IMAGE x=1540 and a future drummer in WORLD x=1150..1500, IMAGE x=1390..1740; their floor remains entirely free. Put the workbench, storage shelves, a few closed boxes and wall hooks only at IMAGE x=1900..2330 on the rear plane, not in the musicians' area. Nothing important in the 240px lateral extensions. Quiet HUD zones: IMAGE upper-left x=240..850,y=0..230; upper-right x=1740..2160,y=0..240; lower-left x=240..860,y=750..1080; lower-right x=1800..2160,y=800..1080. Keep major details out of those rectangles. The garage door must read inside the safe crop and not become a central vanishing-point tunnel. No foreground obstruction or painted interface.",
+  "lighting": "Warm late-afternoon light from a high narrow side window on the right, below the top HUD zone, with broad amber light falling onto the concrete floor. Cool subdued slate-blue shadows and muted warm brick. A restrained practical ceiling light may support the interior, without a bright central bulb. Match the bedroom reference's warm right-hand lighting and broad shadow planes. No extreme darkness, lens flare, harsh central backlight or complex shadow stripes across the musicians.",
+  "must_keep": [
+    "Empty setting: no people, animals, cars, motorcycles, bicycles or instruments",
+    "No amps, drums, speakers, pedalboards, loose cables, rugs or other purchasable/movable band equipment painted into the background",
+    "Clean illustrated 2D world family with warm dark contours and broad cel shading; not pixel art, photorealism or 3D rendering",
+    "Large clear level floor under IMAGE (1000,1000) and IMAGE x=1390..1740",
+    "Quiet central silhouette backing, corners reserved for real HUD",
+    "Simple garage architecture and restrained fixed storage; no heavy grunge or microtexture",
+    "No text, signage, poster lettering, brands, watermark or UI",
+    "Exact final PNG 2400x1080, fully opaque sRGB"
+  ],
+  "references": []
+}

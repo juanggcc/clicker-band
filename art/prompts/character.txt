@@ -1,0 +1,16 @@
+ASSET: $asset_id
+SUBJECT / IDENTITY: $subject
+POSE / CONSTRUCTION: $composition
+LIGHTING: $lighting
+MUST PRESERVE: $must_keep
+
+DELIVERY TARGET
+One full-body illustration on a transparent canvas, registered to the standing guitarist construction reference when that family is selected. Final export is $width x $height px. Preserve the entire figure and instrument. If the image tool cannot produce this exact size, keep enough margin for one uniform registration transform in the editor; do not claim exact dimensions without checking.
+
+CONSTRUCTION RECIPE
+$construction
+
+For an existing construction family, edit its registered source layers and assemble a master preview from them. Preserve that editable structure instead of flattening and splitting the character again. For a new construction family, establish a single master before preparing its layers. A flattened parts sheet is not a registered rig. Do not independently reinvent limbs and attempt to fit their anatomy afterwards. Retain accepted pixels outside the actual edit region using editor layers/masks.
+
+No background scene, floor shadow, text or UI. An existing identity uses its accepted master; a new identity uses the construction template's attachment geometry and the brief's own distinguishing features.
+

@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "style": "Clicker Band / pixel amplifier HUD",
+  "palette": {
+    "ink": "#111923",
+    "face": "#202b35",
+    "inset": "#16212b",
+    "rim": "#52606b",
+    "edge": "#71808a",
+    "muted": "#a8b4b8",
+    "cream": "#f6efdb",
+    "mint": "#8ed8b1",
+    "mint_light": "#c5eed3",
+    "mint_shadow": "#548e75",
+    "gold": "#f4ca78",
+    "coral": "#f28f76",
+    "disabled": "#34434b"
+  },
+  "assets": {
+    "panel_frame.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Scalable pixel panel; tile/stretch the center, preserve 18 px corners.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "bytes": 249,
+      "sha256": "44697784d7eb337cc18f7937c104b0952fc78c87e6fdfc334ed8ddc135554a43"
+    },
+    "item_frame.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Scalable pixel panel; tile/stretch the center, preserve 18 px corners.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "bytes": 249,
+      "sha256": "01799472d0f345e8a20661bbac7cf153033b0682b8bc0ecc10472e8608550bea"
+    },
+    "item_slot.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Scalable pixel panel; tile/stretch the center, preserve 18 px corners.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "bytes": 231,
+      "sha256": "dada53b518b696d902bcb2fb9cac16e573fe9114384397f49a16faada08e7b9f"
+    },
+    "button_secondary.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Scalable pixel panel; tile/stretch the center, preserve 18 px corners.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "bytes": 249,
+      "sha256": "44697784d7eb337cc18f7937c104b0952fc78c87e6fdfc334ed8ddc135554a43"
+    },
+    "button_primary_normal.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Purchase button: normal; keep text as live UI.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        24
+      ],
+      "bytes": 257,
+      "sha256": "2b8dd3474e71b9d3d0ddbbf49d0037a8c3e5901c912e227d53bc9a3ac244a22c"
+    },
+    "button_primary_hover.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Purchase button: hover; keep text as live UI.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        24
+      ],
+      "bytes": 264,
+      "sha256": "9733371fc7f2c5bed8a413962ad7c096ca6b85d1905b669504502104888fdf58"
+    },
+    "button_primary_pressed.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Purchase button: pressed; keep text as live UI.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        24
+      ],
+      "bytes": 246,
+      "sha256": "d23cb12ae0f6b25c09b00b7ac521c17ab84d461d44f20d1641043f6ce0ca6bf9"
+    },
+    "button_primary_disabled.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Purchase button: disabled; keep text as live UI.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "nine_patch_margins_ltrb": [
+        18,
+        18,
+        18,
+        24
+      ],
+      "bytes": 241,
+      "sha256": "517aa298f5a06dcf838e5d69f7c95e6e797a38c7829a10738550c27363c0798f"
+    },
+    "icon_shop.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Shop access: filled roof/awning silhouette, 24 px source.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 212,
+      "sha256": "1decf8cdd624399debf2348c57622d6f3c0afe63766320dc5770ada5f1170c00"
+    },
+    "icon_shop_active.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Shop access: mint selected/available variant.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 212,
+      "sha256": "065bfd810c0baa764b9dd4b38cff5945a697fa1461ad5a851919a587fe162ec6"
+    },
+    "icon_shop_disabled.png": {
+      "size": [
+        72,
+        72
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "role": "Shop access: muted variant.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 211,
+      "sha256": "f7489a9f2244b90e87dfe50584c1bdab3c6727667c4dc6a19b78775dfdf518f1"
+    },
+    "icon_shop_24.png": {
+      "size": [
+        24,
+        24
+      ],
+      "logical_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 1,
+      "role": "Native 24x24 source, for integer-scaled layouts.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 135,
+      "sha256": "ae618027094f8df10bb5c4cf3b42cea30676dce6a7b4ddb0ecd080c46c04730c"
+    },
+    "icon_close.png": {
+      "size": [
+        36,
+        36
+      ],
+      "logical_size": [
+        12,
+        12
+      ],
+      "pixel_scale": 3,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 140,
+      "sha256": "0576996e3c6c209aea5afacf207aeea8a48e8d35f168da6eeb16e73048538a16"
+    },
+    "icon_arrow.png": {
+      "size": [
+        24,
+        24
+      ],
+      "logical_size": [
+        8,
+        8
+      ],
+      "pixel_scale": 3,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 101,
+      "sha256": "f1bd09ee132b05e08eba4e61113a7efecbcf568c0c3f5d957ada582f4bf08d74"
+    },
+    "icon_check.png": {
+      "size": [
+        36,
+        36
+      ],
+      "logical_size": [
+        12,
+        12
+      ],
+      "pixel_scale": 3,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 138,
+      "sha256": "2aedcf5b8302cf26863a615fff60a162786f6451fc778a1a2d63503e3ee1d130"
+    },
+    "icon_lock.png": {
+      "size": [
+        36,
+        36
+      ],
+      "logical_size": [
+        12,
+        12
+      ],
+      "pixel_scale": 3,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 133,
+      "sha256": "d0edb80f9e6353a75d4da65320c6ea766e4c9ef3aa41f0a191421b29a6c67a00"
+    },
+    "icon_coin.png": {
+      "size": [
+        36,
+        36
+      ],
+      "logical_size": [
+        9,
+        9
+      ],
+      "pixel_scale": 4,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 152,
+      "sha256": "98094aa2ae3cb91873830a45124c0bed0e3e3e4962e5fec2722f6debcbbaca1f"
+    },
+    "icon_pick_basic.png": {
+      "size": [
+        48,
+        48
+      ],
+      "logical_size": [
+        16,
+        16
+      ],
+      "pixel_scale": 3,
+      "role": "Transparent geometric icon matching the existing HUD pixel vocabulary.",
+      "alpha": "binary",
+      "filter": "nearest",
+      "bytes": 151,
+      "sha256": "15eb36502d7c1afc7be5d727ef5624971ae3ee42755dfd523e994e8a29c9db43"
+    },
+    "pick_upgrade.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "Amber guitar pick with embossed musical note; illustrated upgrade item.",
+      "alpha": "RGBA; true transparency",
+      "filter": "nearest",
+      "display_box_reference_px": [
+        216,
+        219
+      ],
+      "source": "Built-in image_gen.imagegen; prompt in source/imagegen-pick-prompt.txt",
+      "note": "Illustrated pixel-style sprite; not constrained to the geometric UI sprites' exact palette or native grid.",
+      "bytes": 779010,
+      "sha256": "f39930d21834410fd3a1233965a1962822dc76920527b9def88c969d78678af9"
+    }
+  },
+  "font": "res://assets/fonts/silkscreen/Silkscreen-Regular.ttf",
+  "integration": {
+    "filter": "nearest",
+    "mipmaps": false,
+    "ui_grid_px": 3,
+    "reference_viewport": [
+      1920,
+      1080
+    ],
+    "text_is_live": true,
+    "scope": "Design assets only. Prices and upgrade effects in the mockup are examples."
+  },
+  "total_png_bytes": 782581,
+  "theme_resource": "res://assets/ui/shop/v1/shop_theme.tres"
+}

@@ -1,0 +1,107 @@
+{
+  "review_date": "2026-10-21",
+  "numerical_audit": "current-rig-audit.json",
+  "visuals": "existing captures inspected, no new graphical capture",
+  "files": [
+    {
+      "path": "game/characters/drummer/drummer.gd",
+      "sha256": "a65d4d08617268e381faed30f78c2c0cd8c93be44c066a110ddc3a2bd1593de1"
+    },
+    {
+      "path": "game/characters/drummer/drummer.tscn",
+      "sha256": "92220adac90fa41473579877c4a203fe0380fb5857fd612f4a2788f54e4feae1"
+    },
+    {
+      "path": "game/assets/characters/drummer/rig.json",
+      "sha256": "5d4e3a62a2554d01d06e751346dd04ad93470deba84ed2d2fffff9311a53bbb8"
+    },
+    {
+      "path": "game/tests/run_drummer_pilot_tests.gd",
+      "sha256": "e545ca07765e09d119a2b322ed6a76352d9f31721ee639e6094b42ddf43769dd"
+    },
+    {
+      "path": "workspace/art-jobs/bateria-articulacion-v01/prepare.cjs",
+      "sha256": "28072ea92de076e210a8157357ea860b613ad7446f0bd0233aef9e353cac8878"
+    },
+    {
+      "path": "art/templates/drummer-seated-v1/assembly.png",
+      "sha256": "84e6a187a5e3d8fd237cebb27eb25f9d5fa177db03d88be90019c837761079d3"
+    },
+    {
+      "path": "workspace/art-jobs/bateria-articulacion-v01/qa/contact-and-rebound.png",
+      "sha256": "8ef7d767375a8aeb8cb2d319d0ef4d0d38c7007e2a0bb3224d25e2af0172c9cf"
+    },
+    {
+      "path": "workspace/art-jobs/bateria-articulacion-v01/qa/frames/frame-001.png",
+      "sha256": "595acce605bc3349d884b645207014720c8fe6bfd38edaf747bcaed2749b0da3"
+    },
+    {
+      "path": "workspace/art-jobs/bateria-articulacion-v01/qa/mobile-frames/frame-000.png",
+      "sha256": "ab1b68a6d107b3c4e72af162a9db3ac86d0396316f93417e5c0abd04c9334962"
+    },
+    {
+      "path": "game/assets/characters/drummer/body_core.png",
+      "sha256": "d94d702f4c2aafff1feebd4233544e2a6dfd710c153338a11fbe6c3b7fcfcabd"
+    },
+    {
+      "path": "game/assets/characters/drummer/forearm_L.png",
+      "sha256": "8db826da5f00acd292bf4a183adaf76bc5483fa289c4d5633307d52aad1697c5"
+    },
+    {
+      "path": "game/assets/characters/drummer/forearm_R.png",
+      "sha256": "c4458ab1d4872172767925ccf37aba32ff3c88e4bff2d155977329cea068ad5d"
+    },
+    {
+      "path": "game/assets/characters/drummer/hand_L.png",
+      "sha256": "965aaf8178f0ee0fe4ada915caf77d343025f86c9282371f20ebe73db6d47fd1"
+    },
+    {
+      "path": "game/assets/characters/drummer/hand_R.png",
+      "sha256": "fce085e87b96f6a9f3ff67ecdf32ebe84f890692c737fb70f9f5222464e24ff7"
+    },
+    {
+      "path": "game/assets/characters/drummer/legs_seat.png",
+      "sha256": "bec8b06193b175342b9243d7025e11796e3acdc1d0e06c530612f735df2ba4e3"
+    },
+    {
+      "path": "game/assets/characters/drummer/shoe_L.png",
+      "sha256": "9514bb4e4b926fa52d4b882880344bb44f6533929eaf43eef1c1d995fd7bbebd"
+    },
+    {
+      "path": "game/assets/characters/drummer/shoe_R.png",
+      "sha256": "15502fa56199781af0b19c5c56c3e6be2606da37fe0e0ac5a334749aa53763b1"
+    },
+    {
+      "path": "game/assets/characters/drummer/stick_L.png",
+      "sha256": "0de87d0f349842e079695b50782eabf827c74652b3f576125461e2bde15ae5d4"
+    },
+    {
+      "path": "game/assets/characters/drummer/stick_R.png",
+      "sha256": "0e7af061a03f32e6770c28591666358b9671e4338dbba3440a4a1a9d4afd55a1"
+    },
+    {
+      "path": "game/assets/characters/drummer/upper_arm_L.png",
+      "sha256": "f665c8940c0ed7f5db434a4c01ea4d579cd6b6fbbc988dce5e704bda4bbb5757"
+    },
+    {
+      "path": "game/assets/characters/drummer/upper_arm_R.png",
+      "sha256": "a82f364373c8f755bb462d4fdd7f4d3ddeba2d6b196de7170898127280d65ef4"
+    },
+    {
+      "path": "game/assets/instruments/compact-drums/crash_ride.png",
+      "sha256": "2425751b71109eebacaf829e6d3a8404ef7e78cb6a553b361e7329269432355b"
+    },
+    {
+      "path": "game/assets/instruments/compact-drums/hi_hat_front.png",
+      "sha256": "6a94e31f883bd436c89bee2acd61a864368def0754842a5fd92ac4eff47c168f"
+    },
+    {
+      "path": "game/assets/instruments/compact-drums/hi_hat_top.png",
+      "sha256": "4edec4c2db0949ab444aa2d7b090966445ee40a51f0200fee7692e52c153c104"
+    },
+    {
+      "path": "game/assets/instruments/compact-drums/kit_fixed.png",
+      "sha256": "e6f80a794e1a31c24fe238cb5e41ac2bdb33d0425ed17b85e9f0eb661563f598"
+    }
+  ]
+}

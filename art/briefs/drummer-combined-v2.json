@@ -1,0 +1,22 @@
+{
+  "id": "drummer-combined-v2",
+  "kind": "character",
+  "subject": "Redesign the existing black-cap red-shirt cartoon drummer and compact drum kit as ONE coherent combined master. Correct the backwards-reading stick grips explicitly. First produce contact and rebound masters; then use the approved construction to define a reusable seated family.",
+  "composition": "Shared 800x1000 registration and stage origin (400,920). Audience camera, slightly elevated, same established character. Redraw arms and hands with a natural matched grip, relaxed wrists and fingers visibly wrapped around the correct sides of the sticks. Move/resize kit components if necessary to resolve the complete pose; keep compact four-piece kit. Separate pieces only after the combined pose reads correctly. This new construction supersedes the old arm/kit relationship, not the character identity.",
+  "lighting": "Existing warm flat cel shading, clean dark warm outlines, simplified cartoon anatomy and broad material shapes.",
+  "must_keep": [
+    "Recognizable accepted face, black cap, beard, red loose T-shirt, pendant, dark trousers and worn brown shoes",
+    "Two hands, two complete wooden sticks with readable thumb-index fulcrums and short butt ends behind the palms",
+    "Stick tips point from the thumb-index side toward hi-hat and snare; no backwards stick leaving the little-finger side",
+    "Musician and kit designed together, both contacts visible and physically plausible",
+    "No cymbal covering the face or most of an arm; no equipment painted through skin",
+    "True transparent background and full shared canvas",
+    "Save as a separate v2 experiment; preserve existing runtime"
+  ],
+  "references": [
+    {"path": "workspace/art-jobs/bateria-piloto-v01/exports/drummer-black-cap.png", "role": "identity and cartoon finish reference; arm/stick pose must be redrawn"},
+    {"path": "art/templates/drummer-seated-v1/assembly.png", "role": "old combined design and failure reference: backwards-reading grip and congested depth; do not preserve its hands"},
+    {"path": "workspace/art-jobs/bateria-piloto-v01/exports/drum-kit.png", "role": "kit materials and compact configuration; placement may change for natural playing pose"},
+    {"path": "docs/art/2026-10-21-drummer-review/drummer-seated-v2-draft.json", "role": "coordinate conventions only; v1 limb/contact seeds are not fixed v2 anatomy"}
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "legs": {
+    "crop": {
+      "left": 120,
+      "top": 38,
+      "width": 973,
+      "height": 1333
+    },
+    "box": [
+      245,
+      500,
+      295,
+      399
+    ],
+    "angle": 0
+  },
+  "torso": {
+    "crop": {
+      "left": 0,
+      "top": 170,
+      "width": 1106,
+      "height": 1103
+    },
+    "box": [
+      212,
+      232,
+      277,
+      324
+    ],
+    "angle": 0
+  },
+  "guitar": {
+    "crop": {
+      "left": 202,
+      "top": 650,
+      "width": 1410,
+      "height": 630
+    },
+    "box": [
+      214,
+      353,
+      480,
+      234
+    ],
+    "angle": 34
+  },
+  "arm_fret": {
+    "crop": {
+      "left": 46,
+      "top": 291,
+      "width": 1046,
+      "height": 794
+    },
+    "box": [
+      411,
+      281,
+      244,
+      179
+    ],
+    "angle": 0
+  },
+  "arm_strum": {
+    "crop": {
+      "left": 10,
+      "top": 51,
+      "width": 1215,
+      "height": 1166
+    },
+    "box": [
+      241,
+      383,
+      135,
+      129
+    ],
+    "angle": 0
+  },
+  "head": {
+    "crop": {
+      "left": 46,
+      "top": 163,
+      "width": 1060,
+      "height": 1081
+    },
+    "box": [
+      294,
+      60,
+      220,
+      228
+    ],
+    "angle": 0
+  }
+}

@@ -1,0 +1,31 @@
+CLICKER BAND / clicker-band-style-v0 / provisional
+
+ILLUSTRATION DIRECTION
+2D illustrated game art; clean dark warm outlines; smooth antialiased edges; broad cel-shaded shapes; restrained surface texture; readable musician silhouettes; muted cool shadows and warm material highlights. Match the supplied illustration reference, with no invented artist attribution.
+
+MATERIAL COLOR FAMILIES (guidance, not a promise of exact generated RGB values)
+outline #211C1A, charcoal_shadow #211F20, charcoal #333031, charcoal_light #494346, ivory_shadow #D7BD99, ivory #F4E3C2, ivory_light #FFF2D9, burgundy_shadow #491C20, burgundy #792A2D, denim_shadow #314867, denim #4C6D99, denim_light #6F89AC, skin_shadow #CE8056, skin #F5AC79, skin_light #FFD0A1, slate_shadow #1D2C42, slate #344863, slate_light #667182, wood_shadow #543426, wood #985E38, amber #DE963F, warm_light #FFD78D, foliage_shadow #293622, foliage #576038
+Allow intermediate colors for clean antialiasing and lighting. Preserve material relationships. Skin tones and clothing for new identities are described in the brief and may differ from the reference musician.
+
+AVOID
+No photorealism, 3D render finish, new pixel-art treatment of world illustrations, heavy grain, complex microtexture, painted UI, watermarks or invented lettering.
+
+REFERENCE ROLES
+- inputs/ref-01-bedroom.png: background finish reference
+Use actual attached images. File names or hex codes alone do not provide visual references.
+Keep style, character identity and construction geometry separate. A style reference of a different person must not replace the requested identity.
+
+
+ASSET: park-menu-v1
+LOCATION: An empty modest Spanish neighborhood park at golden hour, where a young indie band could rehearse or busk. Match the supplied bedroom illustration's clean warm dark outlines, broad cel shading, subdued foliage and slate shadows. This is an outdoor location, not bedroom furniture moved outside.
+COMPOSITION / BLOCKOUT: Opaque landscape 2400x1080, aspect ratio 20:9. Fixed eye-level stage camera with gently visible ground, compatible with a standing musician about 800 pixels tall. Essential content lies within image x=240..2159. A wide, level, warm paved clearing occupies the bottom 35 percent, extending across the full scene. Keep the central performance area at image x=700..1800, y=380..1050 unobstructed by foreground objects. Protagonist feet are world (760,1000), IMAGE (1000,1000). A future drummer fits world x=1150..1500, IMAGE x=1390..1740; leave this floor free too. Place a low bench and modest old iron park fence only in the rear third; tree trunks frame the outside edges, not the musician positions. Low muted planting, distant neighborhood buildings and layered tree canopies create a quiet backing. No central walkway vanishing point, no stage platform, no fountain, no equipment. Quiet UI zones in IMAGE coordinates: upper-left x=240..850,y=0..230, upper-right x=1740..2160,y=0..240, lower-left x=240..860,y=750..1080, lower-right x=1800..2160,y=800..1080. Keep these areas calm, with no essential landmarks. No interface drawn into the image.
+LIGHTING: Golden-hour sunlight from upper right, matching the bedroom's amber highlights, desaturated olive foliage, warm gray paving, muted slate-blue shadows. Broad soft shadow masses without high-contrast branches across the musicians. The right-hand light is warm but not a bright central sun or lens flare.
+MUST PRESERVE: Fully empty scene: no people, animals, instruments, amps, drums, loose props, text, logos or HUD; Same illustrated world family as bedroom, not pixel art, photorealism or 3D; Restrained detail and smooth clean contours, no heavy texture or grain; Wide level unobstructed paved foreground, especially IMAGE (1000,1000) and x=1390..1740; Central 1920x1080 crop readable with quiet HUD corners; No essential content in 240-pixel lateral extensions; Exact final canvas 2400x1080, opaque sRGB PNG
+
+DELIVERY TARGET
+An empty illustrated environment, final export 2400 x 1080 px, fully opaque. No musicians, readable lettering, HUD, buttons or menus. Keep movable and upgradeable props separate. Use the supplied background for finish and scale, not as an instruction to copy its furniture into this new location.
+
+LAYOUT CONTRACT
+Image coordinates begin at top left. The central 16:9 image crop is x=240..2159, y=0..1079. The full width is visible on a wider screen. Keep indispensable content in that central crop and maintain clear space under the HUD corners.
+For the existing stage, protagonist feet at world (760,1000) correspond to image (1000,1000). Preserve free floor there and at any extra positions in this brief. Validate the composition with a blockout and actual Godot placement; image generation does not guarantee coordinates. If the generator does not support the final dimensions, reframe/extend in the editor and check the final export.
+

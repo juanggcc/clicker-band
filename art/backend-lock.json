@@ -1,0 +1,15 @@
+{
+  "id": "manual-with-references-v0",
+  "status": "no-generation-backend-selected",
+  "method": "Use the available image tool or a manual editor with the same saved references and prompt. No new subscription required by this recipe.",
+  "provider": null,
+  "model_reported": null,
+  "model_version": null,
+  "seed": null,
+  "settings": {},
+  "workflow_path": null,
+  "workflow_sha256": null,
+  "model_weights": [],
+  "custom_node_versions": {},
+  "reproducibility": "Inputs can be reproduced; identical regenerated pixels are not guaranteed. Preserve final PNGs and editable sources."
+}

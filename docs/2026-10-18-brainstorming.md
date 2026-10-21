@@ -58,7 +58,7 @@ Documento vivo de la conversación con Juan. Recoge la dirección compartida y l
 - Idea de Juan: incluir músicos de la escena con sus instrumentos para poder formar bandas mezcladas, por ejemplo el batería de una banda y el guitarrista de otra.
 - Esta mezcla de músicos es una referencia importante para futuros mocks y para la fantasía de formar tu propia banda.
 - Juan ha aportado tres fotografías y ha indicado rasgos visuales que deben conservarse: cowboy rubio con gafas y sombrero rosa; tupé, barba y chaleco de cuero; batería con gorra y barba; batería de Carolina Durante con pelo rizado rojo; bajista de Carolina Durante muy alto; y las siluetas características de Alcalá Norte.
-- Las fotos se conservan en references/2026-10-18. Los roles no indicados por Juan y los nombres completos siguen pendientes; no atribuir los comportamientos satíricos a personas reales como si fueran hechos.
+- Las fotos se conservan en workspace/references/2026-10-18. Los roles no indicados por Juan y los nombres completos siguen pendientes; no atribuir los comportamientos satíricos a personas reales como si fueran hechos.
 
 ## Interacción musical: hipótesis por probar
 
@@ -78,8 +78,8 @@ Documento vivo de la conversación con Juan. Recoge la dirección compartida y l
 - La selección y producción musical no deben bloquear la exploración del juego.
 - Se han generado cuatro primeros mocks de fases del juego y una segunda exploración con dos hojas de personajes y un garaje más sencillo. No hay implementación ni animación todavía.
 - Juan aprueba la estética más sencilla y los personajes de la segunda dirección. Pide mantenerlos y rehacer los menús, que no le gustan. Se mantiene la necesidad de un flujo consistente de producción y animación.
-- Conservar v1 y v2. La serie mockups/2026-10-18-v3-mobile contiene cinco pantallas solicitadas para enseñar la idea a los compañeros de Juan: cuarto en solitario, incorporación de un artista tras tocar en el parque, garaje con varios músicos, Sala El Sol de Madrid y estadio como endgame. Variar la formación manteniendo al protagonista.
-- Para El Sol se utiliza la fotografía aportada por Juan: escenario bajo y curvo de madera, cortinas rojas, rótulo El Sol, altavoces negros, paredes ocres y puerta amarilla. La referencia se guarda en references/2026-10-18/foto-04-sala-el-sol.png.
+- Conservar v1 y v2. La serie workspace/mockups/2026-10-18-v3-mobile contiene cinco pantallas solicitadas para enseñar la idea a los compañeros de Juan: cuarto en solitario, incorporación de un artista tras tocar en el parque, garaje con varios músicos, Sala El Sol de Madrid y estadio como endgame. Variar la formación manteniendo al protagonista.
+- Para El Sol se utiliza la fotografía aportada por Juan: escenario bajo y curvo de madera, cortinas rojas, rótulo El Sol, altavoces negros, paredes ocres y puerta amarilla. La referencia se guarda en workspace/references/2026-10-18/foto-04-sala-el-sol.png.
 - La interfaz v3 propone recursos compactos arriba, navegación a la izquierda y acción a la derecha; diálogo de incorporación, retratos para cambiar la formación y acciones específicas en los conciertos. Son propuestas visuales pendientes de feedback.
 - La propuesta de producción está en art-direction.md: modelos maestros por personaje, recursos separados y reutilizados, y una prueba de animación de un guitarrista antes de producir el reparto completo.
 - El motor de sonido, las duraciones de las rondas y el motor del juego siguen abiertos. Las cifras y acciones de las interfaces generadas son ejemplos, no decisiones de balance.

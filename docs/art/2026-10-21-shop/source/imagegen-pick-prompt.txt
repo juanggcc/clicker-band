@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: ONE production-ready transparent pixel-art game inventory sprite, for a mobile landscape music clicker called Clicker Band.
+Primary request: A single upgraded guitar pick (plectrum), amber yellow celluloid, front-facing with the tip pointing straight down. It should be an unmistakable guitar pick: broad gently rounded shoulders at top, tapering to one soft triangular point at bottom. Bold silhouette, elegant restrained detail, premium indie-game UI sprite.
+Style/medium: Strict hand-placed low-resolution 2D pixel art on a coherent 48 by 48 logical pixel grid, enlarged with nearest-neighbor square pixels. Every edge made from crisp horizontal and vertical pixel steps. Thick 1–2 logical pixel dark blue-black outline, a small cream highlight on the upper left edge, ochre lower-right bevel suggesting a little thickness. A tiny embossed dark angular music-note mark centered in the pick's upper half. Flat clusters of a few pixels, no noisy texture.
+Color palette: Use ONLY these opaque colors for the pick: outline #111923, shadow #8b572f, midtone #c18d4d, body #e7b562, gold #f4ca78, highlight #f6efdb. Alpha is fully transparent outside the object.
+Composition/framing: Just one pick, centered on a square TRANSPARENT canvas with generous transparent margin, filling about 65 percent of width and 75 percent of height. Upright and symmetrical overall. Readable at 64px display size.
+Text: none.
+Constraints: This is a reusable item sprite, NOT a card, shop mockup, illustration or icon sheet. No labels, letters, prices, words, backdrop, floor, cast shadow outside the object, floating particles, gradients, soft glow, blur, anti-aliasing, realistic materials, metallic chrome or 3D render. Absolutely no checkerboard painted into the image; true transparent background.
+Output intent: PNG with true alpha.

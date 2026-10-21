@@ -43,7 +43,8 @@ func _run() -> void:
 	if max_step > 20.0:
 		errors.append("Abrupt elbow/wrist jump at 0.025-beat sampling")
 	var report := {"samples":960,"intensities":[0.3,0.65,1.0],"max_joint_step_px":max_step,"max_left_elbow_outward_px":max_left_outward,"left_arm_behind_hi_hat":left_hand_z < hi_hat_z and left_hand_z < hi_hat_front_z,"pass":errors.is_empty(),"errors":errors}
-	var destination: String = ProjectSettings.globalize_path("res://../art/jobs/bateria-articulacion-v01/qa/solver-checks.json")
+	var destination: String = ProjectSettings.globalize_path("res://../workspace/art-jobs/bateria-articulacion-v01/qa/solver-checks.json")
+	DirAccess.make_dir_recursive_absolute(destination.get_base_dir())
 	var file := FileAccess.open(destination,FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t"))
 	print(JSON.stringify(report))

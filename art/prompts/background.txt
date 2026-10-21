@@ -1,0 +1,13 @@
+ASSET: $asset_id
+LOCATION: $subject
+COMPOSITION / BLOCKOUT: $composition
+LIGHTING: $lighting
+MUST PRESERVE: $must_keep
+
+DELIVERY TARGET
+An empty illustrated environment, final export $width x $height px, fully opaque. No musicians, readable lettering, HUD, buttons or menus. Keep movable and upgradeable props separate. Use the supplied background for finish and scale, not as an instruction to copy its furniture into this new location.
+
+LAYOUT CONTRACT
+Image coordinates begin at top left. The central 16:9 image crop is x=240..2159, y=0..1079. The full width is visible on a wider screen. Keep indispensable content in that central crop and maintain clear space under the HUD corners.
+For the existing stage, protagonist feet at world (760,1000) correspond to image (1000,1000). Preserve free floor there and at any extra positions in this brief. Validate the composition with a blockout and actual Godot placement; image generation does not guarantee coordinates. If the generator does not support the final dimensions, reframe/extend in the editor and check the final export.
+

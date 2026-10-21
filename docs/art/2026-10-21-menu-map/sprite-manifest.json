@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "date": "2026-10-21",
+  "style_status": "provisional",
+  "assets": {
+    "game/assets/ui/menu/v1/icon_map.png": {
+      "size": [
+        72,
+        72
+      ],
+      "native_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "alpha": "binary",
+      "filter": "nearest",
+      "mipmaps": false,
+      "role": "Folded three-panel map; MAPA menu tile.",
+      "conditional_use": null,
+      "source": "docs/art/2026-10-21-menu-map/source/icon_map_native.png",
+      "sha256": "65dbbfb442d5713265c0f358ecf42f4b4e44676e7eb49443d25b38c2c1d2c8de",
+      "bytes": 235
+    },
+    "game/assets/ui/menu/v1/icon_menu.png": {
+      "size": [
+        72,
+        72
+      ],
+      "native_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "alpha": "binary",
+      "filter": "nearest",
+      "mipmaps": false,
+      "role": "Three-bar general menu glyph; matches the existing HUD bars.",
+      "conditional_use": "Use if the shop/house glyph becomes TIENDA and the corner button opens the general menu.",
+      "source": "docs/art/2026-10-21-menu-map/source/icon_menu_native.png",
+      "sha256": "346bc17c50d9570e6594a285b122c1c579cc1c41df63f5258f06910dcaaf83bd",
+      "bytes": 145
+    },
+    "game/assets/ui/menu/v1/icon_settings.png": {
+      "size": [
+        72,
+        72
+      ],
+      "native_size": [
+        24,
+        24
+      ],
+      "pixel_scale": 3,
+      "alpha": "binary",
+      "filter": "nearest",
+      "mipmaps": false,
+      "role": "Eight-tooth settings gear; AJUSTES menu tile.",
+      "conditional_use": "Use if the pause/options action is consolidated into the general menu.",
+      "source": "docs/art/2026-10-21-menu-map/source/icon_settings_native.png",
+      "sha256": "4ca766a4c78a327a318d3ab84235110ab73e0278f9c946632803b44b53a4e52a",
+      "bytes": 244
+    },
+    "game/assets/ui/map/v1/icon_pin.png": {
+      "size": [
+        36,
+        36
+      ],
+      "native_size": [
+        12,
+        12
+      ],
+      "pixel_scale": 3,
+      "alpha": "binary",
+      "filter": "nearest",
+      "mipmaps": false,
+      "role": "Mint current-location pin; place beside live ESTÁS AQUÍ text.",
+      "conditional_use": null,
+      "source": "docs/art/2026-10-21-menu-map/source/icon_pin_native.png",
+      "sha256": "7f76ca2de194316103284c2569691dbfacd5c1ee2900b023ee3b6dcad8b658a8",
+      "bytes": 141
+    },
+    "game/assets/ui/map/v1/icon_place_park.png": {
+      "size": [
+        36,
+        36
+      ],
+      "native_size": [
+        12,
+        12
+      ],
+      "pixel_scale": 3,
+      "alpha": "binary",
+      "filter": "nearest",
+      "mipmaps": false,
+      "role": "Mint broadleaf tree; 36 px place marker matching the bedroom house.",
+      "conditional_use": null,
+      "source": "docs/art/2026-10-21-menu-map/source/icon_place_park_native.png",
+      "sha256": "ec7ae77e16da91d4f9bc7729e8caf1d4b0ad2217d54a0a6cd63f1ad6c8230d26",
+      "bytes": 142
+    },
+    "game/assets/ui/map/v1/zone_bedroom.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Central 16:9 safe crop of the actual background",
+      "source": "game/assets/backgrounds/bedroom.png",
+      "source_crop_xywh": [
+        240,
+        0,
+        1920,
+        1080
+      ],
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "90b207b91ce8f006249639de0b162e9d8e19e9345910f8ed1de78ee17c19aad0",
+      "bytes": 146960
+    },
+    "game/assets/ui/map/v1/zone_park.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Central 16:9 safe crop of the actual background",
+      "source": "game/assets/backgrounds/park.png",
+      "source_crop_xywh": [
+        240,
+        0,
+        1920,
+        1080
+      ],
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "9dc099aadee48f5bf1ad6a40e5eb7bd40355211eae68562764e65d80670f4fc7",
+      "bytes": 197230
+    },
+    "game/assets/ui/map/v1/zone_locked.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Undiscovered venue silhouette; overlay live ??? and reused lock in Godot",
+      "source": "workspace/reviews/2026-10-21-menu-map/source/zone-locked-generated.png",
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "f9c0f5d56edad6cf7254b191844875d15c858eb131eb2a21f38642dc98731a12",
+      "bytes": 108875
+    },
+    "game/assets/backgrounds/park.png": {
+      "size": [
+        2400,
+        1080
+      ],
+      "role": "Empty park background",
+      "source": "workspace/art-jobs/parque-menu-v01/source/park-generated.png",
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "952a7e317ae2c4de240c7778a4e15316d79ba3f0c6f45da2c3d07178feb88474",
+      "bytes": 5223903
+    }
+  },
+  "total_png_bytes": 5677875,
+  "reused": [
+    "shop/v1/icon_shop.png",
+    "shop/v1/icon_lock.png",
+    "shop/v1/icon_coin.png",
+    "shop/v1/icon_arrow.png",
+    "shop/v1/item_frame.png",
+    "shop/v1/item_slot.png"
+  ],
+  "text_is_live": true,
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "provider_reported": null,
+    "model_reported": null,
+    "seed": null,
+    "park": {
+      "attempts": 1,
+      "elapsed_seconds": 32.155,
+      "prompt": "source/imagegen-park-prompt.txt",
+      "reference": "workspace/art-jobs/parque-menu-v01/inputs/ref-01-bedroom.png",
+      "transparent_background": false
+    },
+    "locked": {
+      "attempts": 1,
+      "elapsed_seconds": 42.407,
+      "prompt": "source/imagegen-locked-prompt.txt",
+      "reference": "workspace/art-jobs/parque-menu-v01/inputs/ref-01-bedroom.png",
+      "transparent_background": false
+    },
+    "icons": "Deterministic code-native extension of the existing shop PNG generator and exact palette."
+  },
+  "validation": "validation.json",
+  "scope": "Art assets and design previews; no gameplay scene or script edits."
+}

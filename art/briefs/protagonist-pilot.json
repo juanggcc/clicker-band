@@ -1,0 +1,15 @@
+{
+  "id": "protagonist-pilot",
+  "kind": "character",
+  "family": "guitar-standing-v1",
+  "subject": "Existing protagonist: young adult musician, black cap and dark hair, charcoal T-shirt, blue jeans, ivory offset electric guitar with burgundy pickguard.",
+  "composition": "Standing three-quarter view facing slightly right. Start from the exact template pieces and their shared 700x900 canvas. This pilot measures editing and layer preparation on a known identity; preserve the existing pose and instrument geometry.",
+  "lighting": "Soft warm highlights compatible with the existing bedroom; no baked floor shadow.",
+  "must_keep": [
+    "Existing identity and silhouette",
+    "Pinned sleeve and strum elbow geometry",
+    "Fretting arm and fingers move together",
+    "Feet and common canvas origin"
+  ],
+  "references": []
+}

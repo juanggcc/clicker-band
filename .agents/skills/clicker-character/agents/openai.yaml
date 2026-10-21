@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clicker Band · personajes"
+  short_description: "Músicos desde piezas y una construcción compartida"
+  default_prompt: "Usa $clicker-character para crear un guitarrista con la plantilla compartida y guardar su editable, piezas y revisión."

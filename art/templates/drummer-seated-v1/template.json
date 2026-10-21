@@ -1,0 +1,164 @@
+{
+  "id": "drummer-seated-v1",
+  "status": "experimental-articulated-groove-for-user-review",
+  "canvas": [
+    800,
+    1000
+  ],
+  "contract": "contracts/drummer-seated-v1.json",
+  "reference": "templates/drummer-seated-v1/assembly.png",
+  "editable": "templates/drummer-seated-v1/registered-parts.ora",
+  "source_scene": "game/characters/drummer/drummer.tscn",
+  "test_scene": "game/art_lab/drummer_articulation.tscn",
+  "runtime_ground_origin": [
+    400,
+    920
+  ],
+  "layers": [
+    {
+      "file": "legs_seat.png",
+      "pivot": [
+        0,
+        0
+      ],
+      "rest_order": 0
+    },
+    {
+      "file": "shoe_R.png",
+      "pivot": [
+        291,
+        879
+      ],
+      "rest_order": 1
+    },
+    {
+      "file": "shoe_L.png",
+      "pivot": [
+        514,
+        880
+      ],
+      "rest_order": 2
+    },
+    {
+      "file": "body_core.png",
+      "pivot": [
+        380,
+        611
+      ],
+      "rest_order": 3
+    },
+    {
+      "file": "upper_arm_L.png",
+      "pivot": [
+        474,
+        394
+      ],
+      "rest_order": 4
+    },
+    {
+      "file": "upper_arm_R.png",
+      "pivot": [
+        266,
+        391
+      ],
+      "rest_order": 5
+    },
+    {
+      "file": "kit_fixed.png",
+      "pivot": [
+        0,
+        0
+      ],
+      "rest_order": 6
+    },
+    {
+      "file": "crash_ride.png",
+      "pivot": [
+        254,
+        380
+      ],
+      "rest_order": 7
+    },
+    {
+      "file": "forearm_L.png",
+      "pivot": [
+        503,
+        516
+      ],
+      "rest_order": 8
+    },
+    {
+      "file": "stick_L.png",
+      "pivot": [
+        422,
+        521
+      ],
+      "rest_order": 9
+    },
+    {
+      "file": "hand_L.png",
+      "pivot": [
+        422,
+        521
+      ],
+      "rest_order": 10
+    },
+    {
+      "file": "hi_hat_front.png",
+      "pivot": [
+        0,
+        0
+      ],
+      "rest_order": 11
+    },
+    {
+      "file": "hi_hat_top.png",
+      "pivot": [
+        586,
+        495
+      ],
+      "rest_order": 12
+    },
+    {
+      "file": "forearm_R.png",
+      "pivot": [
+        306,
+        478
+      ],
+      "rest_order": 13
+    },
+    {
+      "file": "stick_R.png",
+      "pivot": [
+        406,
+        489
+      ],
+      "rest_order": 14
+    },
+    {
+      "file": "hand_R.png",
+      "pivot": [
+        406,
+        489
+      ],
+      "rest_order": 15
+    }
+  ],
+  "rig_data": "templates/drummer-seated-v1/rig.json",
+  "landmark_note": "Manual projected joints measured on playing keypose, not physical 3D lengths. Ready-pose v0 parts are incompatible.",
+  "geometry_policy": "Reuse exact registered parts or redraw against measured attachments. Full 800x1000 canvas. Fixed segment lengths per supported keypose; never stretch ready-pose forearms. Alternate foreshortening requires another registered pose.",
+  "construction_prompt": "Use this playing-pose assembly and the exact registered layers. Preserve projected joints and fixed grip/tip relations. Outfit changes must redraw sleeves and any newly exposed elbow/wrist overlap on these same coordinates. Validate only the supported hi-hat/snare groove until alternate drum keyposes are drawn.",
+  "supported_motion": [
+    "crossed_hi_hat_snare_groove",
+    "heel_pivot_motion",
+    "subtle_torso_lean",
+    "hi_hat_top_motion"
+  ],
+  "pending": [
+    "Alternate tom/crash poses",
+    "Shirt-outfit cutouts",
+    "Fully reconstructed joint overlaps at broader motion range",
+    "Drawn pedal/contact geometry"
+  ],
+  "production_ready": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "drummer-articulation-pilot",
+  "kind": "character",
+  "subject": "Articulation pilot of the accepted cartoon drummer with black cap and oversized red T-shirt. Preserve accepted face, compact drum kit and 800x1000 construction. Produce actual registered layers and a Godot animation test with shoulder/elbow/wrist, rigid sticks, stable seat, foot pedals and cymbal response.",
+  "composition": "Use accepted registered masters as pixel sources. Reconstruct only hidden torso and stand patches needed when moving extracted arms and cymbals. Keep target canvas 800x1000 and ground origin (400,920). Inspect movement, contact and mobile composition. This is an art-lab scene, not a replacement of the main game lineup.",
+  "lighting": "Preserve accepted cel-shaded warm light and simplified cartoon face, no photorealistic additions.",
+  "must_keep": ["Accepted cartoon face unchanged", "Compact kit silhouette and relative scale", "Fixed-length arm segments and rigid stick tip contact", "Seated pelvis and heels stable", "Full common canvas for every layer", "Inspect attacks and rebounds in Godot"],
+  "references": [
+    {"path": "workspace/art-jobs/bateria-piloto-v01/exports/drummer-black-cap.png", "role": "accepted identity, style and registered pose; exact pixel source for visible moving pieces"},
+    {"path": "workspace/art-jobs/bateria-piloto-v01/exports/drum-kit.png", "role": "accepted compact instrument and exact strike surfaces"},
+    {"path": "art/templates/drummer-seated-v0/template.json", "role": "draft joint and contact coordinates to refine against actual source"}
+  ]
+}

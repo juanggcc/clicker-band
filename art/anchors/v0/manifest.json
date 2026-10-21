@@ -1,0 +1,25 @@
+{
+  "status": "snapshot-of-provisional-existing-art",
+  "snapshot_date": "2026-10-21",
+  "provenance": "Existing project assets; prior generation/edit history is only partially documented in docs/art and animation-pipeline-v2.md. No model name inferred.",
+  "files": [
+    {
+      "path": "art/anchors/v0/protagonist.png",
+      "source": "game/assets/characters/protagonist/master.png",
+      "role": "Existing artistic master; identity/finish reference, not runtime assembly",
+      "sha256": "e06720eeac26f069f7eacceff7033dfbb8f5f7baf86d83b3328c3e67bb7b3c22"
+    },
+    {
+      "path": "art/anchors/v0/bedroom.png",
+      "source": "game/assets/backgrounds/bedroom.png",
+      "role": "Existing background; finish and scale reference",
+      "sha256": "8c656f4c3151756ee33357a3ac94ef4b26f4e7f7e481f0badd51be007178519e"
+    },
+    {
+      "path": "art/anchors/v0/integration.png",
+      "source": "workspace/reviews/2026-10-21-shop/integrated-shop.png",
+      "role": "Existing integration screenshot; composition only, not generation reference",
+      "sha256": "772a5d0d7402e93499105878ae6f3590120c1963b7bcb11101ad58b6c27e66d4"
+    }
+  ]
+}

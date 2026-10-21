@@ -1,0 +1,49 @@
+{
+  "id": "drummer-seated-v0",
+  "status": "draft-for-human-review-not-articulated",
+  "canvas": [800, 1000],
+  "drawing_origin": [0, 0],
+  "runtime_ground_origin": [400, 920],
+  "sprite_settings": {"position": [0, 0], "centered": false},
+  "camera": "Audience view, almost frontal, slightly elevated; anatomical right appears on screen left.",
+  "reference_job": "workspace/art-jobs/bateria-piloto-v01",
+  "masters": {
+    "outfit_a": "workspace/art-jobs/bateria-piloto-v01/exports/drummer-black-cap.png",
+    "outfit_b": "workspace/art-jobs/bateria-piloto-v01/exports/drummer-red-cap.png",
+    "instrument": "workspace/art-jobs/bateria-piloto-v01/exports/drum-kit.png"
+  },
+  "construction": "Compact four-piece acoustic kit: kick, one rack tom, floor tom and snare hidden behind kick; closed hi-hat and combined crash/ride. Clothes and cap are skins of the same seated construction. Cartoon face from first candidate, only chin slightly rounded. No photographic facial rendering.",
+  "landmarks": {
+    "neck": [380, 343], "pelvis": [380, 611],
+    "shoulder_R": [243, 391], "elbow_R": [211, 521], "wrist_R": [276, 538], "grip_R": [311, 539], "stick_tip_R": [372, 440],
+    "shoulder_L": [477, 386], "elbow_L": [505, 529], "wrist_L": [546, 546], "grip_L": [576, 544], "stick_tip_L": [647, 436],
+    "hip_R": [327, 608], "knee_R": [257, 661], "ankle_R": [251, 864],
+    "hip_L": [423, 608], "knee_L": [552, 661], "ankle_L": [568, 861]
+  },
+  "landmark_note": "Manually estimated anatomical centres in the registered A master, rounded to whole pixels; draft tolerance 8 px for drawing/skin review, not a validated skeleton. Hidden shoulders/hips are inferred beneath clothes. Do not label generated PNG masters as separated rig parts.",
+  "strike_targets": {
+    "rack_tom": {"xy": [341, 492], "radius": [50, 13]},
+    "floor_tom": {"xy": [225, 571], "radius": [45, 12]},
+    "snare": {"xy": [460, 576], "radius": [33, 10]},
+    "hi_hat": {"xy": [535, 500], "radius": [14, 7]},
+    "crash_ride": {"xy": [253, 396], "radius": [34, 14]}
+  },
+  "pedal_targets": {
+    "kick": {"xy": [280, 885], "status": "planned-hidden-contact-not-measured"},
+    "hi_hat": {"xy": [620, 885], "status": "planned-hidden-contact-not-measured"}
+  },
+  "planned_cutout_parts": ["throne", "pelvis_torso", "head_cap_neck", "upper_arm_R", "forearm_R", "hand_R", "stick_R", "upper_arm_L", "forearm_L", "hand_L", "stick_L", "thigh_R", "shin_R", "shoe_R", "thigh_L", "shin_L", "shoe_L", "bag"],
+  "planned_kit_parts": ["rear_hardware", "snare", "rack_tom", "floor_tom", "kick_front", "hi_hat_stand_bottom", "hi_hat_top", "crash_ride", "pedals"],
+  "geometry_policy": "Uniform transform per complete master only. Keep all exported layers on 800x1000. No independent limb or kit stretching. New poses require drawn hidden overlap and measured joint centres. Same anatomical skeleton beneath both outfits; sleeves change silhouettes, not pivots.",
+  "motion_plan": {
+    "arms": "Two-segment shoulder-elbow-wrist chains, fixed lengths. Hand owns grip; wooden stick rigidly rotates about grip and strikes at its tip. Aim the tip, then solve wrist and elbow; never aim wrist directly at a drum head. Draw alternate forearm/hand poses for foreshortening or crossed groove.",
+    "groove": "Right hand crosses above left toward hi-hat; left plays snare. Initial open ready pose is not the crossed groove keypose. Also draw ride, rack, floor and crash keyposes plus rebound. Check reach without changing segment length.",
+    "legs": "Pelvis fixed on throne; thigh-knee-shin-ankle chains, heel anchored, small ankle/forefoot motion for pedal. Right foot kick, left hi-hat. Hidden contacts require a transparent equipment view for final validation.",
+    "torso": "Subtle torso lean and head nod around pelvis and neck; no global vertical body bounce that slides feet or seat.",
+    "clothes": "Use drawn joint overlaps beneath sleeves. Bag belongs to torso/hip, optional small secondary sway; never parent bag to arm.",
+    "cymbals": "Small rotation about actual stand mounting point. Hi-hat upper cymbal translates vertically about its rod; stand stays fixed."
+  },
+  "occlusion": "Rear hardware/throne, legs, torso/upper arms, snare/rear drums, kick shell/front, forearms/hands, sticks. Crossed right hand above left. Separate foreground rim strips can cover a tip during impact; never put an entire cymbal in front of both hands. Current preview only restores visible forearm/stick pixels, not hidden cutout anatomy.",
+  "mobile_budget": {"view_px": [844, 390], "example_instance_scale": 0.8, "approx_kit_width_on_screen_px": 161, "members_in_layout": 5, "note": "Static layout proof using two existing musicians, this drummer and two explicitly marked silhouette reservations; not a runtime or final band layout."},
+  "production_ready": false
+}

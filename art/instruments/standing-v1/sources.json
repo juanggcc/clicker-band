@@ -1,0 +1,123 @@
+{
+  "id": "standing-fretted-instruments-v1",
+  "note": "Reviewed source snapshot; do not silently refresh hashes when an input drifts.",
+  "files": [
+    {
+      "path": "art/instruments/standing-v1/system.json",
+      "sha256": "18ce72bfc34b437445025c7097496461d2bfd83076e5a7582dc77cb9ce403359"
+    },
+    {
+      "path": "art/style-v0.json",
+      "sha256": "1967edd1ff370ab9fdfa3782edffe56c50eda61290e0f0e0a2c26ddf28077b81"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/profile.json",
+      "sha256": "e5ccde9f8bfd5b3bd8d1ca4786873e96e0f229508771a8aaf23e96ce964dae78"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/reference.png",
+      "sha256": "b4cbe1bf0de653108bb267d7d38217ec5dd7f8c97a9de426cad9c8f33e3a451b"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/assembly.png",
+      "sha256": "9e5212ed6d70065d0bbf925c42037ee7678ba56d82a57f186b51ad11940e3ead"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/guide.svg",
+      "sha256": "ea1670a6721c5c4aceb4c570a823297969dc11a43369672895c8cef496379b8d"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/guide.png",
+      "sha256": "fafecacad7888e5243d02b263cd1313668368fd2be1900def5e0db55a91e20b3"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/profile.json",
+      "sha256": "d3711724040857068334bdbfd2b809f65646a4caca9d3b1bb6322e2dcd87c72a"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/reference.png",
+      "sha256": "72b38aa4cf413e4f1e16a14eb7a479adb10f61f7d77ced6b511eaa3e5ab1519b"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/assembly.png",
+      "sha256": "b84770ee231b9c80a890245ea20463b66bd69234f0a1fafac345956d6ae4c81c"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/guide.svg",
+      "sha256": "ded0fc6401eace65d4f54393e80fc8e2b42a2ef6b121dc8c0a634efef98a9491"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/guide.png",
+      "sha256": "3b262c51b2a1da10e98df943f5aa80168b422b4b5db5271375a5505517605903"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/arm_fret.png",
+      "sha256": "8fc54d908a5bf3cd2baf8e9b6dd5f74e05b86b8ef6feddb6b333ebc047f2e7e1"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/arm_strum.png",
+      "sha256": "cafb37e486bfdbec76b1c0c674b4a7f39c0471f31e8d377aaf25d8fbee10f532"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/body_core.png",
+      "sha256": "2346d5334a01691667613a1e39c22092e744380eacabfdc7ff073f536631d71c"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/hand_fret.png",
+      "sha256": "3324c9fa990ea383927ac044a0719c64f11174f8a0a75250451b1f425c17e9de"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/legs.png",
+      "sha256": "16f96fb2d662394a6bcf6eddffee5efa2d394e8428d55a7473f1cbf26e17ba05"
+    },
+    {
+      "path": "art/instruments/standing-v1/musician/strum_sleeve.png",
+      "sha256": "6097305754a80d42674c4e1427cbfd6e2eb623a494044deb6f8ac4e591d4de1b"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.gd",
+      "sha256": "9f763cdc09fd488838c5d227e1a53af5fdbb873f2985afa16485cedcf53f0925"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.tscn",
+      "sha256": "8cb2d85918255d72df4720b41e005121c40d1241463c6c0c37c80c1fc56d78ac"
+    },
+    {
+      "path": "game/characters/protagonist/deformable_limb.gd",
+      "sha256": "371fffa5ab42e117c6b1fe904c475d729f8e6cf41983b266e60cf9489c21ad4b"
+    },
+    {
+      "path": "art/instruments/standing-v1/bass/source.png",
+      "sha256": "e0284c82ce4808f72c7bc113d9d3e97231807ca1104d58b8ea8e3326423e1e19"
+    },
+    {
+      "path": "game/assets/characters/protagonist/arm_fret.png",
+      "sha256": "8fc54d908a5bf3cd2baf8e9b6dd5f74e05b86b8ef6feddb6b333ebc047f2e7e1"
+    },
+    {
+      "path": "game/assets/characters/protagonist/hand_fret.png",
+      "sha256": "3324c9fa990ea383927ac044a0719c64f11174f8a0a75250451b1f425c17e9de"
+    },
+    {
+      "path": "game/assets/characters/protagonist/arm_strum.png",
+      "sha256": "cafb37e486bfdbec76b1c0c674b4a7f39c0471f31e8d377aaf25d8fbee10f532"
+    },
+    {
+      "path": "game/assets/characters/cowboy/arm_fret.png",
+      "sha256": "8fc54d908a5bf3cd2baf8e9b6dd5f74e05b86b8ef6feddb6b333ebc047f2e7e1"
+    },
+    {
+      "path": "game/assets/characters/cowboy/hand_fret.png",
+      "sha256": "3324c9fa990ea383927ac044a0719c64f11174f8a0a75250451b1f425c17e9de"
+    },
+    {
+      "path": "game/assets/characters/cowboy/arm_strum.png",
+      "sha256": "cafb37e486bfdbec76b1c0c674b4a7f39c0471f31e8d377aaf25d8fbee10f532"
+    },
+    {
+      "path": "art/instruments/standing-v1/guitar/source.png",
+      "sha256": "1a0a8a22de1b1d65846dfd30ee07c7fdaa78b4c260f452a49d2630ef77381c24"
+    }
+  ],
+  "revision": "Jaguar custom axis correction; anchor positions and wrist contacts unchanged."
+}

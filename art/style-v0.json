@@ -1,0 +1,76 @@
+{
+  "id": "clicker-band-style-v0",
+  "status": "provisional",
+  "basis": "Recursos visibles el 2026-10-21; el usuario confirma que el estilo es muy provisional.",
+  "world_style": "2D illustrated game art; clean dark warm outlines; smooth antialiased edges; broad cel-shaded shapes; restrained surface texture; readable musician silhouettes; muted cool shadows and warm material highlights. Match the supplied illustration reference, with no invented artist attribution.",
+  "ui_style": "Separate pixel interface family; Silkscreen; dark stepped panels; mint, gold and coral accents. Keep text and controls in Godot.",
+  "avoid": "No photorealism, 3D render finish, new pixel-art treatment of world illustrations, heavy grain, complex microtexture, painted UI, watermarks or invented lettering.",
+  "palettes": {
+    "world": {
+      "status": "proposed-material-ramps-not-indexed",
+      "colors": {
+        "outline": "#211C1A",
+        "charcoal_shadow": "#211F20",
+        "charcoal": "#333031",
+        "charcoal_light": "#494346",
+        "ivory_shadow": "#D7BD99",
+        "ivory": "#F4E3C2",
+        "ivory_light": "#FFF2D9",
+        "burgundy_shadow": "#491C20",
+        "burgundy": "#792A2D",
+        "denim_shadow": "#314867",
+        "denim": "#4C6D99",
+        "denim_light": "#6F89AC",
+        "skin_shadow": "#CE8056",
+        "skin": "#F5AC79",
+        "skin_light": "#FFD0A1",
+        "slate_shadow": "#1D2C42",
+        "slate": "#344863",
+        "slate_light": "#667182",
+        "wood_shadow": "#543426",
+        "wood": "#985E38",
+        "amber": "#DE963F",
+        "warm_light": "#FFD78D",
+        "foliage_shadow": "#293622",
+        "foliage": "#576038"
+      }
+    },
+    "ui": {
+      "status": "documented-from-tools/art/build_shop_ui.py",
+      "colors": {
+        "ink": "#111923",
+        "face": "#202B35",
+        "inset": "#16212B",
+        "rim": "#52606B",
+        "edge": "#71808A",
+        "muted": "#A8B4B8",
+        "cream": "#F6EFDB",
+        "mint": "#8ED8B1",
+        "mint_light": "#C5EED3",
+        "mint_shadow": "#548E75",
+        "gold": "#F4CA78",
+        "coral": "#F28F76",
+        "disabled": "#34434B"
+      }
+    }
+  },
+  "references": {
+    "character": [
+      "anchors/v0/protagonist.png"
+    ],
+    "background": [
+      "anchors/v0/bedroom.png"
+    ],
+    "integration_only": [
+      "anchors/v0/integration.png"
+    ]
+  },
+  "contracts": {
+    "character": "contracts/character-v2.json",
+    "background": "contracts/background-v1.json"
+  },
+  "templates": {
+    "guitar-standing-v0": "templates/guitar-standing-v0/template.json",
+    "guitar-standing-v1": "templates/guitar-standing-v1/template.json"
+  }
+}

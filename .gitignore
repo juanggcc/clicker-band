@@ -11,22 +11,13 @@ game/*.tmp
 tools/art/node_modules/
 __pycache__/
 
-# Exploration material from before v1 (stays on disk, not in the repo)
-mockups/
-references/
-output/
+# Local data and work in progress: art jobs, references and photos, review captures,
+# zips, raw Ableton exports and builds. AGENTS.md says what belongs in the repo.
+workspace/
 
-# Web export (served to phones for testing, never committed)
-build/
-
-# Art pipeline: jobs, sources, review material and original loops stay on disk, not in
-# the repo; the game only needs what is already exported into game/
-art/
-.agents/
-tools/art/
-docs/art/
-loop-exports/
-
-# Android export (export_presets.cfg writes it to the repo root)
+# Builds and keys, wherever they end up
 *.apk
-*.apk.idsig
+*.aab
+*.idsig
+*.keystore
+*.jks

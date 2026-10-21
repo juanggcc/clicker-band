@@ -1,0 +1,63 @@
+{
+  "status": "experimental-construction-snapshot",
+  "snapshot_date": "2026-10-21",
+  "note": "Rig changes require reviewing/versioning the family. New skins do not replace these source layers.",
+  "files": [
+    {
+      "path": "art/templates/guitar-standing-v0/layers/arm_fret.png",
+      "sha256": "8fc54d908a5bf3cd2baf8e9b6dd5f74e05b86b8ef6feddb6b333ebc047f2e7e1"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/arm_strum.png",
+      "sha256": "cafb37e486bfdbec76b1c0c674b4a7f39c0471f31e8d377aaf25d8fbee10f532"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/body_core.png",
+      "sha256": "f962068a703b7f5fc2f48beacadc41ff7ee2e6b6d7d5654dfd9e556094028d78"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/guitar.png",
+      "sha256": "426c2c96754c262db747519525d4bf2e236de47b53e297ca263aac77c2276c6c"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/hand_fret.png",
+      "sha256": "3324c9fa990ea383927ac044a0719c64f11174f8a0a75250451b1f425c17e9de"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/legs.png",
+      "sha256": "efa6455a38ad218e0aa261adf11e47e304d0fe70fa08eb33f96a7150ddd476d6"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/layers/strum_sleeve.png",
+      "sha256": "1709b635704c133155122e6de900b4f126a6d19efa91b836fa9d6b73366db12e"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/assembly.png",
+      "sha256": "29147c7f4515c7312539c00d6233237ad29f376fe9abae1515c8d8b340958dd4"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/guide.svg",
+      "sha256": "2f2f1037cd5ab0a7e123ec0def78853684d480c8480ec41ee60ffa38fd83b19b"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/registered-parts.ora",
+      "sha256": "18a5ecbe8cbd61c99d512814a049783fa802f4dce9e9585de0a878e9ad068419"
+    },
+    {
+      "path": "art/templates/guitar-standing-v0/template.json",
+      "sha256": "386342fc246bd3f5ab77c443490b41efcaf3f5907aa7d87c0a0e8d1bd63dc02d"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.gd",
+      "sha256": "9f763cdc09fd488838c5d227e1a53af5fdbb873f2985afa16485cedcf53f0925"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.tscn",
+      "sha256": "8cb2d85918255d72df4720b41e005121c40d1241463c6c0c37c80c1fc56d78ac"
+    },
+    {
+      "path": "game/characters/protagonist/deformable_limb.gd",
+      "sha256": "371fffa5ab42e117c6b1fe904c475d729f8e6cf41983b266e60cf9489c21ad4b"
+    }
+  ]
+}

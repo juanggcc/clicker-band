@@ -1,0 +1,17 @@
+CLICKER BAND / $style_id / $style_status
+
+ILLUSTRATION DIRECTION
+$world_style
+
+MATERIAL COLOR FAMILIES (guidance, not a promise of exact generated RGB values)
+$palette
+Allow intermediate colors for clean antialiasing and lighting. Preserve material relationships. Skin tones and clothing for new identities are described in the brief and may differ from the reference musician.
+
+AVOID
+$avoid
+
+REFERENCE ROLES
+$references
+Use actual attached images. File names or hex codes alone do not provide visual references.
+Keep style, character identity and construction geometry separate. A style reference of a different person must not replace the requested identity.
+

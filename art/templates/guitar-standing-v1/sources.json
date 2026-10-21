@@ -1,0 +1,64 @@
+{
+  "status": "experimental-construction-snapshot",
+  "snapshot_date": "2026-10-21",
+  "revision": "v1 neck/collar fit, biceps/shirt overlap and Jaguar custom axis correction; rig coordinates unchanged",
+  "files": [
+    {
+      "path": "art/templates/guitar-standing-v1/layers/arm_fret.png",
+      "sha256": "8fc54d908a5bf3cd2baf8e9b6dd5f74e05b86b8ef6feddb6b333ebc047f2e7e1"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/arm_strum.png",
+      "sha256": "cafb37e486bfdbec76b1c0c674b4a7f39c0471f31e8d377aaf25d8fbee10f532"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/body_core.png",
+      "sha256": "b98d3b34e39dc0d02aad6571cb26aa0832686ae47db54215991566cc9fd444f4"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/guitar.png",
+      "sha256": "65bc5fc772f5a5d4beb957647b3bbe28f3f17f24e72851e36c39afc171f5aa3a"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/hand_fret.png",
+      "sha256": "3324c9fa990ea383927ac044a0719c64f11174f8a0a75250451b1f425c17e9de"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/legs.png",
+      "sha256": "efa6455a38ad218e0aa261adf11e47e304d0fe70fa08eb33f96a7150ddd476d6"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/layers/strum_sleeve.png",
+      "sha256": "1709b635704c133155122e6de900b4f126a6d19efa91b836fa9d6b73366db12e"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/assembly.png",
+      "sha256": "447008a4a3f90b7a9e2d71a1b114c74a44544eda09b9f71235bf6ff6ee05a21b"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/guide.svg",
+      "sha256": "d9e909fffcd7e3da93a6f4b25bb95425a02e91eb1993ce8f2e23848336a70f7a"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/registered-parts.ora",
+      "sha256": "c77d177a32ab2052c07ba4dd2abde0ee16ba0ec433c2b04bb0af8fd522f26d94"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/template.json",
+      "sha256": "fbc4faf5276bf517e7567e34afc27ca30c5876edc3d8fec72ba1215e48b08ee7"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.gd",
+      "sha256": "9f763cdc09fd488838c5d227e1a53af5fdbb873f2985afa16485cedcf53f0925"
+    },
+    {
+      "path": "game/characters/protagonist/protagonist.tscn",
+      "sha256": "8cb2d85918255d72df4720b41e005121c40d1241463c6c0c37c80c1fc56d78ac"
+    },
+    {
+      "path": "game/characters/protagonist/deformable_limb.gd",
+      "sha256": "371fffa5ab42e117c6b1fe904c475d729f8e6cf41983b266e60cf9489c21ad4b"
+    }
+  ],
+  "latest_art_correction": "workspace/art-jobs/jaguar-custom-v01"
+}

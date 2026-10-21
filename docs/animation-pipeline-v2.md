@@ -1,6 +1,6 @@
 # Brazo del mástil recogido — 21 de octubre de 2026
 
-Revisión posterior del mismo día: corregido el encaje de cabeza/cuello/camiseta en `body_core.png`, manteniendo los puntos del rig. La construcción actual está en `art/templates/guitar-standing-v1/`. La primera variante de aspecto es `game/characters/cowboy/cowboy.tscn`, comprobable junto al protagonista en `game/art_lab/guitar_comparison.tscn`. Fuentes y corrección: `art/jobs/protagonist-neck-v01/` y `art/jobs/cowboy-piloto-v01/`.
+Revisión posterior del mismo día: corregido el encaje de cabeza/cuello/camiseta en `body_core.png`, manteniendo los puntos del rig. La construcción actual está en `art/templates/guitar-standing-v1/`. La primera variante de aspecto es `game/characters/cowboy/cowboy.tscn`, comprobable junto al protagonista en `game/art_lab/guitar_comparison.tscn`. Fuentes y corrección: `workspace/art-jobs/protagonist-neck-v01/` y `workspace/art-jobs/cowboy-piloto-v01/`.
 
 La manga derecha queda más pegada al costado. Un pequeño tramo de bíceps queda fijo bajo la manga, integrado en el torso. El codo permanece oculto detrás del torso y la guitarra; el antebrazo emerge hacia el mástil. No se utiliza la prueba descartada con el codo bajo.
 
@@ -18,7 +18,7 @@ La superposición oculta la articulación que no necesita verse. El tramo visibl
 
 Integración: `game/characters/protagonist/` y `game/assets/characters/protagonist/`.
 
-Entrega y copias: `output/art/2026-10-21-fret-tucked/`.
+Entrega y copias: `workspace/output/art/2026-10-21-fret-tucked/`.
 
 - `assets/torso.png`, `assets/body_core.png`, `assets/master.png`: capas modificadas y compuesto final de 700×900 con transparencia.
 - `poses/pose-1.png` a `pose-3.png`: referencias de los tres agarres, exportadas desde Godot; no se intercambian como fotogramas durante el juego.
@@ -30,4 +30,4 @@ Entrega y copias: `output/art/2026-10-21-fret-tucked/`.
 Verificación: importación y seis renders de Godot, revisados visualmente. No se amplió la batería de pruebas del juego.
 
 
-Último retoque: bíceps fijo en `torso.png` y `body_core.png`. Fuentes, prompt y comparativa en `output/art/2026-10-21-fixed-biceps/`. El antebrazo mantiene el montaje descrito arriba.
+Último retoque: bíceps fijo en `torso.png` y `body_core.png`. Fuentes, prompt y comparativa en `workspace/output/art/2026-10-21-fixed-biceps/`. El antebrazo mantiene el montaje descrito arriba.

@@ -60,7 +60,9 @@ func _run() -> void:
 		if not sprite.transform.is_equal_approx(Transform2D.IDENTITY):
 			errors.append("Rest pose does not reconstruct source coordinates")
 	var report: Dictionary = {"pass": errors.is_empty(), "samples": 7684, "intensities": [0, 0.3, 0.65, 1], "max_grip_error_px": max_grip_error, "max_contact_error_px": max_contact_error, "max_rigid_length_error_px": max_bone_error, "max_wrist_step_px": max_joint_step, "min_tip_clearance_px": min_tip_clearance, "errors": errors}
-	FileAccess.open("res://../art/jobs/bateria-conjunto-v02/rig/qa/runtime-checks.json", FileAccess.WRITE).store_string(JSON.stringify(report, "\t"))
+	var destination: String = ProjectSettings.globalize_path("res://../workspace/art-jobs/bateria-conjunto-v02/rig/qa/runtime-checks.json")
+	DirAccess.make_dir_recursive_absolute(destination.get_base_dir())
+	FileAccess.open(destination, FileAccess.WRITE).store_string(JSON.stringify(report, "\t"))
 	print(JSON.stringify(report))
 	drummer.queue_free()
 	await process_frame

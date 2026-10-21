@@ -16,9 +16,9 @@ parser.add_argument('--out', required=True)
 args = parser.parse_args()
 
 ROOT = Path('/Users/juangonzalezcabello/Main/clicker-band')
-V3 = ROOT / 'mockups/2026-10-18-v3-mobile'
-V2 = ROOT / 'mockups/2026-10-18-v2'
-V1 = ROOT / 'mockups/2026-10-18-v1'
+V3 = ROOT / 'workspace/mockups/2026-10-18-v3-mobile'
+V2 = ROOT / 'workspace/mockups/2026-10-18-v2'
+V1 = ROOT / 'workspace/mockups/2026-10-18-v1'
 OUT = Path(args.out)
 OUT.parent.mkdir(parents=True, exist_ok=True)
 

@@ -1,0 +1,104 @@
+{
+  "id": "drummer-seated-v2-draft",
+  "status": "design-proposal-awaiting-combined-master",
+  "production_ready": false,
+  "runtime_consumer": null,
+  "coordinate_system": {
+    "canvas_px": [800, 1000],
+    "drawing_origin_px": [0, 0],
+    "x_positive": "screen-right",
+    "y_positive": "screen-down",
+    "angle_zero": "positive-X",
+    "angle_positive": "clockwise",
+    "authoring_angle_unit": "degrees",
+    "runtime_angle_unit": "radians",
+    "instance_origin_px": [400, 920],
+    "instance_origin_meaning": "shared stage placement; neither pelvis nor shoe pivot",
+    "drawing_to_instance_at_rest": "p - instance_origin_px",
+    "instance_to_world": "instance.global_transform * local_point",
+    "normalization_for_metadata_only": "u=x/800, v=y/1000; use pixel coordinates for registration",
+    "sprite_centered": false,
+    "full_canvas_export": true,
+    "scale_policy": "uniform transformation of complete registered construction; no independent limb stretching",
+    "sides": "anatomical L/R of musician; shoulder R is screen-left in this camera",
+    "depth": "explicit sprite order per pose; independent of X/Y"
+  },
+  "camera": {
+    "view": "audience, near-frontal, slightly elevated, matched to approved combined reference",
+    "calibrated_3d_projection": false,
+    "rule": "one shared camera across musician, kit and skins; projected lengths are pose-specific"
+  },
+  "layout_seeds_from_v1": {
+    "status": "composition-guides-only; remeasure if the combined master changes",
+    "pelvis_px": [380, 611],
+    "shoulder_R_px": [266, 391],
+    "shoulder_L_px": [474, 394],
+    "heel_R_px": [291, 879],
+    "heel_L_px": [514, 880],
+    "cymbal_mounts_px": {
+      "crash_ride": [254, 380],
+      "hi_hat_top": [586, 495]
+    },
+    "strike_regions": {
+      "hi_hat": {"center_px": [535, 500], "radius_px": [14, 7]},
+      "snare": {"center_px": [460, 576], "radius_px": [33, 10]},
+      "rack_tom": {"center_px": [341, 492], "radius_px": [50, 13]},
+      "floor_tom": {"center_px": [225, 571], "radius_px": [45, 12]},
+      "crash_ride": {"center_px": [253, 396], "radius_px": [34, 14]}
+    },
+    "region_provenance": "drummer-seated-v0 template; illustrative ellipses, not newly measured v2 surfaces",
+    "pedal_contacts": null
+  },
+  "authoring_spaces": {
+    "kit_and_strike_regions": "drawing-canvas",
+    "skin_and_arm_rest_landmarks": "drawing-canvas at reference pose; transformed through torso at runtime",
+    "runtime_solver_target": "convert fixed canvas target into torso-local space before solving"
+  },
+  "required_arm_landmarks_per_pose": ["shoulder", "elbow", "wrist", "grip", "stick_butt", "stick_tip"],
+  "poses_to_author": {
+    "crossed_groove_contact": {
+      "approved_master": null,
+      "arm_R_landmarks": null,
+      "arm_L_landmarks": null,
+      "intended_targets": {"R": "hi_hat", "L": "snare"},
+      "occlusion_relations": null,
+      "joint_envelopes_deg": null
+    },
+    "crossed_groove_rebound": {
+      "approved_master": null,
+      "arm_R_landmarks": null,
+      "arm_L_landmarks": null,
+      "occlusion_relations": null,
+      "joint_envelopes_deg": null
+    }
+  },
+  "grip_policy": {
+    "hand_pivot": "wrist",
+    "independent_stick_pivot": "grip",
+    "initial_mode": "rigid hand-plus-stick per approved pose",
+    "optional_stick_rotation": "only within a drawn and reviewed finger/occlusion envelope",
+    "stick_length_reference": "shared visual construction; projected lengths may differ with authored foreshortening"
+  },
+  "segmentation_policy": {
+    "kit": ["rear_hardware", "kick", "rack_tom", "floor_tom", "snare", "crash_disc", "hi_hat_upper", "hi_hat_lower", "pedals"],
+    "conditional_extra_parts": ["front_rims_where_tips_cross", "local_foreground_occluders", "grip_fingers_if_required"],
+    "rule": "split by motion or distinct depth relation; reconstruct hidden surfaces; no disc remnants in fixed hardware",
+    "z_policy": "structural transform nodes z=0; unique sprite ranks per pose; actor root controls stage depth",
+    "rest_recomposition": "compare separated composite to approved combined master"
+  },
+  "reuse": {
+    "family_owns": ["coordinate conventions", "construction", "pose library", "approved motion envelopes", "occlusion rules"],
+    "kit_owns": ["strike surfaces", "mounts", "pedal contacts", "registered kit artwork"],
+    "skin_owns": ["identity", "clothes", "accessories", "registered pose artwork"],
+    "compatibility": "validated family-plus-kit-plus-skin combination, not an unconditional shared skeleton",
+    "single_source_rule": "derive runtime, export metadata and QA guides from canonical family/kit/skin data"
+  },
+  "proposed_acceptance": {
+    "contact_tolerance_px": 2,
+    "tolerance_status": "initial review criterion, not yet validated against v2 artwork",
+    "joint_limits": "measure approved keyposes; do not invent anatomical ranges from projected coordinates",
+    "hand_state_combinations": ["R-contact/L-contact", "R-rebound/L-contact", "R-contact/L-rebound", "R-rebound/L-rebound"],
+    "visual_checks": ["master versus split composite", "sleeves and wrist seams", "grip and tip", "sprite-level depth", "no static cymbal remnants", "pedals revealed", "844x390 with HUD", "second skin without arbitrary offsets"]
+  },
+  "deferred": ["tom and crash keyposes", "long-sleeve skin", "production integration"]
+}

@@ -56,7 +56,8 @@ func capture(name: String) -> void:
 		return
 	await settle()
 	RenderingServer.force_draw()
-	var destination: String = "res://../docs/art/2026-10-21-shop/integrated-%s.png" % name
+	var destination: String = ProjectSettings.globalize_path("res://../workspace/reviews/2026-10-21-shop/integrated-%s.png" % name)
+	DirAccess.make_dir_recursive_absolute(destination.get_base_dir())
 	check(root.get_texture().get_image().save_png(destination) == OK, "save " + name)
 
 

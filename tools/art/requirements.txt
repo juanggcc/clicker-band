@@ -1,0 +1,2 @@
+# Only needed for pixel checks and deterministic template composition.
+Pillow==12.3.0

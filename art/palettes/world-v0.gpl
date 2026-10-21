@@ -1,0 +1,28 @@
+GIMP Palette
+Name: clicker-band-style-v0 / world
+Columns: 6
+# Generated from art/style-v0.json
+ 33  28  26	outline
+ 33  31  32	charcoal_shadow
+ 51  48  49	charcoal
+ 73  67  70	charcoal_light
+215 189 153	ivory_shadow
+244 227 194	ivory
+255 242 217	ivory_light
+ 73  28  32	burgundy_shadow
+121  42  45	burgundy
+ 49  72 103	denim_shadow
+ 76 109 153	denim
+111 137 172	denim_light
+206 128  86	skin_shadow
+245 172 121	skin
+255 208 161	skin_light
+ 29  44  66	slate_shadow
+ 52  72  99	slate
+102 113 130	slate_light
+ 84  52  38	wood_shadow
+152  94  56	wood
+222 150  63	amber
+255 215 141	warm_light
+ 41  54  34	foliage_shadow
+ 87  96  56	foliage

@@ -1,0 +1,163 @@
+{
+  "id": "drummer-seated-v1-articulation-pilot",
+  "canvas": [
+    800,
+    1000
+  ],
+  "scope": "Red-shirt crossed hi-hat/snare pilot only; alternate target poses and shirt outfit remain unvalidated.",
+  "format": "PNG RGBA sRGB, straight alpha, full shared canvas",
+  "required_files": [
+    "legs_seat.png",
+    "shoe_R.png",
+    "shoe_L.png",
+    "body_core.png",
+    "upper_arm_L.png",
+    "upper_arm_R.png",
+    "kit_fixed.png",
+    "crash_ride.png",
+    "forearm_L.png",
+    "stick_L.png",
+    "hand_L.png",
+    "hi_hat_front.png",
+    "hi_hat_top.png",
+    "forearm_R.png",
+    "stick_R.png",
+    "hand_R.png"
+  ],
+  "required_data": "rig.json",
+  "drawing_origin": [
+    0,
+    0
+  ],
+  "runtime_ground_origin": [
+    400,
+    920
+  ],
+  "runtime_scene": "game/characters/drummer/drummer.tscn",
+  "rig": {
+    "id": "drummer-seated-v1-articulation-pilot",
+    "canvas": [
+      800,
+      1000
+    ],
+    "ground_origin": [
+      400,
+      920
+    ],
+    "pelvis": [
+      380,
+      611
+    ],
+    "arms": {
+      "R": {
+        "shoulder": [
+          266,
+          391
+        ],
+        "elbow": [
+          306,
+          478
+        ],
+        "wrist": [
+          406,
+          489
+        ],
+        "grip": [
+          469,
+          497
+        ],
+        "tip": [
+          626,
+          545
+        ]
+      },
+      "L": {
+        "shoulder": [
+          474,
+          394
+        ],
+        "elbow": [
+          503,
+          516
+        ],
+        "wrist": [
+          422,
+          521
+        ],
+        "grip": [
+          412,
+          538
+        ],
+        "tip": [
+          446,
+          584
+        ],
+        "elbow_hint": [
+          505,
+          517
+        ],
+        "max_outward_px": 64
+      }
+    },
+    "heels": {
+      "R": [
+        291,
+        879
+      ],
+      "L": [
+        514,
+        880
+      ]
+    },
+    "cymbals": {
+      "crash_ride": [
+        254,
+        380
+      ],
+      "hi_hat_top": [
+        586,
+        495
+      ]
+    },
+    "targets": {
+      "hi_hat": [
+        535,
+        500
+      ],
+      "snare": [
+        460,
+        576
+      ],
+      "rack_tom": [
+        341,
+        492
+      ],
+      "floor_tom": [
+        225,
+        571
+      ],
+      "crash_ride": [
+        253,
+        396
+      ]
+    },
+    "revision": "left-arm-tucked-v2",
+    "notes": [
+      "Joint centres measured manually on alternate playing pose.",
+      "All cutout pixels share full 800x1000 canvas.",
+      "Left-arm revision: elbow tucked, hand drawn inward; forearm/hand behind both hi-hat plates.",
+      "Left pose registration: source resized uniformly to width 800 then 0.9 scale plus translation (30,79); no limb stretching.",
+      "Right arm and accepted face pixels unchanged by this revision.",
+      "Hidden torso patch; head/central graphic are accepted pixels.",
+      "First red-shirt articulation pilot; shirt outfit not rigged yet.",
+      "Shoe heels are fixed; hidden pedal geometry still inferred."
+    ]
+  },
+  "unsupported_poses": [
+    "rack_tom",
+    "floor_tom",
+    "crash_ride"
+  ],
+  "pedal_geometry_verified": false,
+  "production_ready": false
+}

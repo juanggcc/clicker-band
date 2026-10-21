@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "assets": {
+    "game/assets/ui/map/v1/zone_bedroom.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Central 16:9 safe crop of the actual background",
+      "source": "game/assets/backgrounds/bedroom.png",
+      "source_crop_xywh": [
+        240,
+        0,
+        1920,
+        1080
+      ],
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "90b207b91ce8f006249639de0b162e9d8e19e9345910f8ed1de78ee17c19aad0"
+    },
+    "game/assets/ui/map/v1/zone_park.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Central 16:9 safe crop of the actual background",
+      "source": "game/assets/backgrounds/park.png",
+      "source_crop_xywh": [
+        240,
+        0,
+        1920,
+        1080
+      ],
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "9dc099aadee48f5bf1ad6a40e5eb7bd40355211eae68562764e65d80670f4fc7"
+    },
+    "game/assets/ui/map/v1/zone_locked.png": {
+      "size": [
+        384,
+        216
+      ],
+      "role": "Undiscovered venue silhouette; overlay live ??? and reused lock in Godot",
+      "source": "workspace/reviews/2026-10-21-menu-map/source/zone-locked-generated.png",
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "f9c0f5d56edad6cf7254b191844875d15c858eb131eb2a21f38642dc98731a12"
+    },
+    "game/assets/backgrounds/park.png": {
+      "size": [
+        2400,
+        1080
+      ],
+      "role": "Empty park background",
+      "source": "workspace/art-jobs/parque-menu-v01/source/park-generated.png",
+      "filter": "linear",
+      "opaque": true,
+      "sha256": "952a7e317ae2c4de240c7778a4e15316d79ba3f0c6f45da2c3d07178feb88474"
+    }
+  }
+}

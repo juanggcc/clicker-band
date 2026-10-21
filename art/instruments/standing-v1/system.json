@@ -1,0 +1,49 @@
+{
+  "id": "standing-fretted-instruments-v1",
+  "status": "provisional-art-production-contract",
+  "character_family": "guitar-standing-v1",
+  "canvas": [900, 900],
+  "character_canvas": [700, 900],
+  "character_feet_origin": [350, 900],
+  "torso_pivot": [355, 560],
+  "instrument_node": "Body/Torso/Rig/Guitar",
+  "instrument_position": [0, 0],
+  "instrument_centered": false,
+  "coordinate_note": "Pixels in the untransformed shared source canvas, not world coordinates. Extend only the right side of the 700x900 character canvas.",
+  "profiles": {"guitar": "guitar/profile.json", "bass": "bass/profile.json"},
+  "alpha_visible_threshold": 32,
+  "grip_centers": [[565, 405], [545, 412], [525, 419]],
+  "grip_min_instrument_alpha": 128,
+  "neck_axis_probe_fractions": [0.5, 0.65, 0.8, 0.9],
+  "neck_center_max_offset_px": 2,
+  "neck_axis_probe_note": "Cross-sections on the exposed neck must stay centred on the bridge-nut line. These positions are chosen to avoid the body and headstock in the current profiles.",
+  "wrist_probes_neutral": [[540, 434], [535, 436], [530, 438]],
+  "grip_deltas_from_neutral": [[0, 0], [-20, 7], [-40, 14]],
+  "wrist_max_instrument_alpha": 16,
+  "probe_note": "These points lie on the wrist/forearm behind the instrument, just left of the front-finger cutout. All must remain uncovered. They are measured for this exact rig, not anatomical detection.",
+  "picking_contact": [352, 480],
+  "strap_area_xyxy": [425, 380, 452, 415],
+  "rig_sources": [
+    "game/characters/protagonist/protagonist.gd",
+    "game/characters/protagonist/protagonist.tscn",
+    "game/characters/protagonist/deformable_limb.gd"
+  ],
+  "runtime_contact_sources": [
+    "game/assets/characters/protagonist/arm_fret.png",
+    "game/assets/characters/protagonist/hand_fret.png",
+    "game/assets/characters/protagonist/arm_strum.png",
+    "game/assets/characters/cowboy/arm_fret.png",
+    "game/assets/characters/cowboy/hand_fret.png",
+    "game/assets/characters/cowboy/arm_strum.png"
+  ],
+  "musician_layers": [
+    {"file": "legs.png", "offset": [0, 0]},
+    {"file": "arm_fret.png", "offset": [-63, 21]},
+    {"file": "body_core.png", "offset": [0, 0]},
+    {"file": "$instrument", "offset": [0, 0]},
+    {"file": "hand_fret.png", "offset": [-63, 21]},
+    {"file": "arm_strum.png", "offset": [0, 0]},
+    {"file": "strum_sleeve.png", "offset": [0, 0]}
+  ],
+  "limits": "Only this standing fretted-instrument pose and proportions. Drums, seated musicians and different arm proportions need their own contact contract. Visual review of hardware and animation remains required."
+}

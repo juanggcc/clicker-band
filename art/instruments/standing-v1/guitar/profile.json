@@ -1,0 +1,18 @@
+{
+  "id": "standing-electric-guitar-v1",
+  "kind": "guitar",
+  "reference": "guitar/reference.png",
+  "source_reference": "guitar/source.png",
+  "source_points": {"bridge": [395, 1720], "nut": [396, 379]},
+  "source_axis_samples": {"neck_base": [398, 1180], "neck_mid": [396, 700]},
+  "reference_identity": "Jaguar custom, ivory body, burgundy pickguard, cream neck pickup, dark bridge pickup and custom chrome three-knob control plate.",
+  "strings_default": 6,
+  "anchors": {"bridge": [300, 495], "nut": [606, 390]},
+  "anchor_tolerance_px": 2,
+  "reference_visible_bounds_xyxy": [222, 353, 699, 586],
+  "visible_size_range": {"width": [440, 520], "height": [200, 270]},
+  "reference_body_region_xyxy": [222, 374, 441, 586],
+  "neck_width_range_px": [20, 34],
+  "neck_axis_tolerance_px": 4,
+  "prompt_note": "An electric guitar at the supplied scale: about 477x233 painted pixels, compact neck ending at the registered nut. The current reference is an ivory/burgundy custom Jaguar with offset waist. Keep one straight bridge-string-fretboard-nut centreline; source neck-base and middle points must align. Body outline, finish and custom hardware follow the requested identity reference; preserve the common hand corridor and visible wrist."
+}

@@ -1,0 +1,17 @@
+GIMP Palette
+Name: clicker-band-style-v0 / ui
+Columns: 6
+# Generated from art/style-v0.json
+ 17  25  35	ink
+ 32  43  53	face
+ 22  33  43	inset
+ 82  96 107	rim
+113 128 138	edge
+168 180 184	muted
+246 239 219	cream
+142 216 177	mint
+197 238 211	mint_light
+ 84 142 117	mint_shadow
+244 202 120	gold
+242 143 118	coral
+ 52  67  75	disabled

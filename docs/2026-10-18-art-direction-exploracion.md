@@ -4,7 +4,7 @@ Fecha: 18 de octubre de 2026.
 
 ## Cambio tras ver los primeros mocks
 
-Juan quiere que los músicos de la escena se reconozcan y que el estilo pueda producirse y animarse durante el desarrollo del juego. Las primeras cuatro pantallas, conservadas en mockups/2026-10-18-v1, sirven como exploración de ambiente. Su renderizado detallado no se toma como objetivo obligatorio de producción.
+Juan quiere que los músicos de la escena se reconozcan y que el estilo pueda producirse y animarse durante el desarrollo del juego. Las primeras cuatro pantallas, conservadas en workspace/mockups/2026-10-18-v1, sirven como exploración de ambiente. Su renderizado detallado no se toma como objetivo obligatorio de producción.
 
 La segunda exploración usa contornos claros, masas de color y menos textura. Incluye dos hojas de personajes y una revisión del garaje. Juan aprueba esta dirección gráfica y estos personajes. Rechaza los menús de v2 y encarga una serie para móvil horizontal con interfaz replanteada. Los PNG son imágenes compuestas; no contienen capas de brazos, instrumentos ni esqueletos de animación. Las hojas tienen canal alfa, pero necesitan limpieza, separación y normalización antes de convertirse en recursos de producción.
 
@@ -46,9 +46,9 @@ Godot es un ejemplo de motor que permite tanto animación de imágenes individua
 
 ## Entregables
 
-- mockups/2026-10-18-v1: cuatro pantallas de la primera dirección.
-- mockups/2026-10-18-v2: dos hojas de personajes, garaje simplificado y prompts completos.
-- references/2026-10-18: las tres fotos aportadas por Juan, copiadas para que no dependan del portapapeles temporal.
+- workspace/mockups/2026-10-18-v1: cuatro pantallas de la primera dirección.
+- workspace/mockups/2026-10-18-v2: dos hojas de personajes, garaje simplificado y prompts completos.
+- workspace/references/2026-10-18: las tres fotos aportadas por Juan, copiadas para que no dependan del portapapeles temporal.
 
 Generación: herramienta integrada image_gen. No se ha usado la CLI ni se ha producido todavía una animación.
 
@@ -59,4 +59,4 @@ Juan solicita cinco pantallas para compartir la idea: cuarto, parque con incorpo
 
 La interfaz v3 explora controles táctiles grandes en los extremos, recursos compactos, diálogo de incorporación y acciones contextuales de ensayo/concierto. Se conserva cada prompt. El motor, las mecánicas finas y los números de balance no quedan fijados por las imágenes. Los recursos finales de UI se construirían con código.
 
-Entregables: mockups/2026-10-18-v3-mobile, con cinco PNG, README, prompts y un ZIP para compartir. Generación mediante herramienta integrada image_gen.
+Entregables: workspace/mockups/2026-10-18-v3-mobile, con cinco PNG, README, prompts y un ZIP para compartir. Generación mediante herramienta integrada image_gen.

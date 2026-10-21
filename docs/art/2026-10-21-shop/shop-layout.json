@@ -1,0 +1,98 @@
+{
+  "reference_viewport": [
+    1920,
+    1080
+  ],
+  "preview_render": [
+    1280,
+    720
+  ],
+  "shop_access": {
+    "anchor": "bottom_right",
+    "rect": [
+      1716,
+      864,
+      156,
+      168
+    ],
+    "right_margin": 48,
+    "bottom_margin": 48,
+    "icon": "icon_shop.png",
+    "label": "TIENDA",
+    "available_dot": "#8ed8b1"
+  },
+  "modal": {
+    "rect": [
+      804,
+      96,
+      1068,
+      888
+    ],
+    "overlay": "#091420 at alpha 0.72",
+    "content_inset": [
+      51,
+      36
+    ],
+    "close_rect": [
+      1755,
+      132,
+      72,
+      72
+    ]
+  },
+  "item_card": {
+    "rect": [
+      855,
+      375,
+      966,
+      399
+    ],
+    "art_slot": [
+      885,
+      405,
+      246,
+      249
+    ],
+    "art_rect": [
+      900,
+      420,
+      216,
+      219
+    ],
+    "title": "PÚA DE ENSAYO",
+    "description": [
+      "Un ataque más preciso.",
+      "Más por cada toque."
+    ],
+    "title_font_size": 50,
+    "body_font_size": 30
+  },
+  "purchase_button": {
+    "rect": [
+      1365,
+      819,
+      420,
+      105
+    ],
+    "font_size": 40,
+    "normal": "MEJORAR",
+    "unaffordable": "FALTAN {missing} €",
+    "success": "MEJORADA"
+  },
+  "mock_data": {
+    "illustrative_only": true,
+    "initial_level": 0,
+    "target_level": 1,
+    "cost": 50,
+    "base_gain_before": 1,
+    "base_gain_after": 2,
+    "balance_available": 12450,
+    "balance_unaffordable": 12
+  },
+  "responsive": {
+    "desktop": "Anchor the modal right with 48 px horizontal and 96 px vertical margins at the reference scale.",
+    "phone": "Retain this layout under the existing canvas_items scale; preserve readable 30 px metadata at reference size.",
+    "wide": "Anchor to the right edge; do not stretch the modal across the entire viewport.",
+    "short": "Use containers; allow content scrolling if the available logical height falls below 888 px."
+  }
+}

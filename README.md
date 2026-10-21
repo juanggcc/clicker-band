@@ -41,7 +41,7 @@ de pantalla.
 ```
 
 Para guardar capturas del juego durante esa comprobación, omite `--headless` y
-añade `-- --capture` al final. Se guardan en `docs/art/2026-10-21-shop/integrated-*.png`.
+añade `-- --capture` al final. Se guardan en `workspace/reviews/2026-10-21-shop/integrated-*.png`.
 
 ## Probar en el iPhone (Safari)
 
@@ -49,7 +49,7 @@ Sin Xcode, el juego se prueba en iPhone como exportación web servida desde el M
 red local. Godot web exige HTTPS fuera de `localhost`, así que cada Mac tiene su propia CA
 de desarrollo, en la que el iPhone confía una sola vez.
 
-1. `./scripts/dev_tls.sh`: crea la CA y el certificado del servidor en `~/.clicker-band-tls/`.
+1. `./tools/dev/dev_tls.sh`: crea la CA y el certificado del servidor en `~/.clicker-band-tls/`.
    Vuelve a ejecutarlo si cambia la IP del Mac. La CA se conserva y el iPhone no hay que
    tocarlo de nuevo. Las claves nunca entran en el repo.
 2. Pasa `~/.clicker-band-tls/ca.crt` al iPhone por AirDrop. Luego, en Ajustes:
@@ -71,7 +71,7 @@ la app nativa.
 ## Estructura
 
 ```
-game/
+game/             proyecto Godot: el código y los sprites y loops que usa el juego
   main/           escena raíz: cablea lógica, música, personaje y HUD
   core/           lógica pura (RefCounted, sin nodos): TapTracker, TempoTiers, Economy,
                   WorldMap (zonas compradas), BandRecruit (encuentro de cada nuevo integrante),
@@ -80,15 +80,24 @@ game/
   band/           integrantes que se pueden unir: bandmate.gd y un .tres por músico en members/
   shop/           objetos de la tienda: shop_item.gd y un .tres por objeto en items/
   props/          objetos de escenario (el pedal comprado aparece junto al protagonista)
-  audio/          MusicPlayer (stems de guitarra y del integrante en sincronía), stems/ y
+  audio/          MusicPlayer (guitarra, bajo de Ren y batería de Cham en sincronía), stems/ y
                   sfx/ (buy.wav suena al comprar, más agudo si compras seguido)
   characters/     personajes como marionetas de recortes (una escena por personaje)
   ui/             HUD, menú general, tienda, mapa, diálogo de integrante y pausa
-  assets/         PNG de arte (protagonista, cuarto e icono del 2026-10-21)
-  tests/          runner de tests sin dependencias
-tools/            generadores de placeholders (audio y sprites), Python sin dependencias
-docs/             brief de sprites, pipeline de animación y exploración previa a v1
+  assets/         PNG que usa el juego: personajes, instrumentos, fondos e interfaz
+  tests/          runners de tests sin dependencias
+  art_lab/        escenas aisladas para revisar rigs con F6
+art/              receta del arte: biblia, estilo, briefs, contratos, prompts, paletas,
+                  plantillas de rigs con su editable, instrumentos y anclas de estilo
+tools/            código auxiliar: pipeline de arte (art/), generadores de placeholders y
+                  scripts de desarrollo (dev/)
+docs/             diseño, HUD, audio, pipeline de animación e informes de arte (docs/art/)
+.agents/skills/   skills de los agentes de arte: fondo, personaje e instrumento
+workspace/        local, fuera de Git: encargos de arte, referencias, capturas de revisión,
+                  loops originales de Ableton y builds
 ```
+
+Instrucciones para agentes (brief del juego, qué se sube y flujo de trabajo): [AGENTS.md](AGENTS.md).
 
 Conceptos de Godot que aparecen en el proyecto: **escenas** (`.tscn`, árboles de nodos
 reutilizables), **nodos** (`Sprite2D`, `Label`, `AudioStreamPlayer`...), **señales**
@@ -119,7 +128,7 @@ se conserva como documento histórico.
   (siempre el mismo vector en negativo).
 - **Música.** Los tres loops de guitarra actuales comparten 120 BPM y duran 8 compases
   (16,0 s), en WAV estéreo de 16 bits/48 kHz. Los originales `guitar_loop_01/02/03.wav`
-  de `loop-exports/` corresponden a `slow/mid/fast.wav` de `game/audio/stems/`.
+  de `workspace/loops/` corresponden a `slow/mid/fast.wav` de `game/audio/stems/`.
   Se importan con Loop Forward, sin recortar ni normalizar, y compresión QOA.
   El reproductor tiene un margen de 6 dB. Detalles en [docs/audio-loops.md](docs/audio-loops.md).
   Cambia `BPM` en `game/audio/music_player.gd` si cambia el tempo. El generador
@@ -134,5 +143,5 @@ se conserva como documento histórico.
   declaraciones sin tipo.
 - Indentación con tabulador en `.gd` (es lo que inserta el editor de Godot).
 - Los `.import` que aparecen junto a cada asset se commitean; `game/.godot/` no.
-- `mockups/`, `references/` y `output/` son material de exploración anterior a v1 y no
-  entran en el repo.
+- `workspace/` es local y no entra en el repo: encargos de arte, referencias, capturas,
+  exports de Ableton y builds. Qué se sube y qué no está en [AGENTS.md](AGENTS.md).

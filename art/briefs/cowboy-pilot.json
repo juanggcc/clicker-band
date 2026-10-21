@@ -1,0 +1,26 @@
+{
+  "id": "cowboy-pilot",
+  "kind": "character",
+  "family": "guitar-standing-v1",
+  "subject": "Adult musician from the supplied leftmost illustration: pink cowboy hat, shoulder-length blond hair, black sunglasses, short beard, brown jacket over a cream T-shirt, dark trousers and brown boots. Jacket sleeves rolled to the existing elbow openings for the shared playing rig.",
+  "composition": "Use the corrected standing-guitarist construction. Preserve canvas, shoulder/arm joins, hips, hand contacts and guitar exactly. New head/clothing artwork on the registered source layers; reuse existing forearms, hands and guitar.",
+  "lighting": "Warm neutral cel shading compatible with the existing protagonist, smooth clean contours.",
+  "must_keep": [
+    "Pink cowboy hat",
+    "Long blond hair",
+    "Black sunglasses and short beard",
+    "Brown jacket and cream shirt",
+    "Exact arm and instrument registration",
+    "Correct anatomical neck/collar connection"
+  ],
+  "references": [
+    {
+      "path": "art/anchors/cowboy-v0/cowboy-illustration.png",
+      "role": "New identity and clothing; leftmost musician extracted from the previous illustrated reference sheet"
+    },
+    {
+      "path": "workspace/references/anchors/cowboy-v0/reference-photo.png",
+      "role": "Identity reference only: upper-right man with pink cowboy hat, blond hair and sunglasses"
+    }
+  ]
+}

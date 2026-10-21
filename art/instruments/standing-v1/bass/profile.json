@@ -1,0 +1,17 @@
+{
+  "id": "standing-electric-bass-v1",
+  "kind": "bass",
+  "reference": "bass/reference.png",
+  "source_reference": "bass/source.png",
+  "source_points": {"bridge": [512, 1410], "nut": [512, 214]},
+  "source_axis_samples": {"neck_base": [512, 980], "neck_mid": [512, 600]},
+  "strings_default": 4,
+  "anchors": {"bridge": [247, 518], "nut": [685.3136, 358.4711]},
+  "anchor_tolerance_px": 2,
+  "reference_visible_bounds_xyxy": [195, 299, 767, 614],
+  "visible_size_range": {"width": [540, 640], "height": [280, 370]},
+  "reference_body_region_xyxy": [195, 378, 470, 614],
+  "neck_width_range_px": [26, 38],
+  "neck_axis_tolerance_px": 4,
+  "prompt_note": "A full-size electric bass, visibly larger than the guitar: about 572x315 painted pixels, with the nut farther along the same hand corridor. Extend the neck beyond the fretting hand; do not shrink the instrument to fit a 700px canvas. The SG reference has a balanced body and bridge -> pickup -> sticker -> pickup -> neck ordering; those identity details apply to this SG, not every bass design."
+}

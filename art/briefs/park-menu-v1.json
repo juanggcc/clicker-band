@@ -1,0 +1,17 @@
+{
+  "id": "park-menu-v1",
+  "kind": "background",
+  "subject": "An empty modest Spanish neighborhood park at golden hour, where a young indie band could rehearse or busk. Match the supplied bedroom illustration's clean warm dark outlines, broad cel shading, subdued foliage and slate shadows. This is an outdoor location, not bedroom furniture moved outside.",
+  "composition": "Opaque landscape 2400x1080, aspect ratio 20:9. Fixed eye-level stage camera with gently visible ground, compatible with a standing musician about 800 pixels tall. Essential content lies within image x=240..2159. A wide, level, warm paved clearing occupies the bottom 35 percent, extending across the full scene. Keep the central performance area at image x=700..1800, y=380..1050 unobstructed by foreground objects. Protagonist feet are world (760,1000), IMAGE (1000,1000). A future drummer fits world x=1150..1500, IMAGE x=1390..1740; leave this floor free too. Place a low bench and modest old iron park fence only in the rear third; tree trunks frame the outside edges, not the musician positions. Low muted planting, distant neighborhood buildings and layered tree canopies create a quiet backing. No central walkway vanishing point, no stage platform, no fountain, no equipment. Quiet UI zones in IMAGE coordinates: upper-left x=240..850,y=0..230, upper-right x=1740..2160,y=0..240, lower-left x=240..860,y=750..1080, lower-right x=1800..2160,y=800..1080. Keep these areas calm, with no essential landmarks. No interface drawn into the image.",
+  "lighting": "Golden-hour sunlight from upper right, matching the bedroom's amber highlights, desaturated olive foliage, warm gray paving, muted slate-blue shadows. Broad soft shadow masses without high-contrast branches across the musicians. The right-hand light is warm but not a bright central sun or lens flare.",
+  "must_keep": [
+    "Fully empty scene: no people, animals, instruments, amps, drums, loose props, text, logos or HUD",
+    "Same illustrated world family as bedroom, not pixel art, photorealism or 3D",
+    "Restrained detail and smooth clean contours, no heavy texture or grain",
+    "Wide level unobstructed paved foreground, especially IMAGE (1000,1000) and x=1390..1740",
+    "Central 1920x1080 crop readable with quiet HUD corners",
+    "No essential content in 240-pixel lateral extensions",
+    "Exact final canvas 2400x1080, opaque sRGB PNG"
+  ],
+  "references": []
+}

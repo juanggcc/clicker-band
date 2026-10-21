@@ -1,0 +1,7 @@
+{
+  "name": "clicker-band-art-export",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Optional deterministic registration/export helpers; image generation uses the built-in image tool.",
+  "dependencies": {"sharp": "0.35.5"}
+}

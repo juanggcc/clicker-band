@@ -1,0 +1,30 @@
+{
+  "id": "guitar-standing-v0",
+  "status": "experimental-current-rig-not-final-art",
+  "purpose": "Reusable construction for a standing three-quarter guitarist with the existing proportions and contact geometry. Appearance is independent of the provisional illustration style.",
+  "contract": "contracts/character-v2.json",
+  "canvas": [700, 900],
+  "reference": "templates/guitar-standing-v0/assembly.png",
+  "editable": "templates/guitar-standing-v0/registered-parts.ora",
+  "guide": "templates/guitar-standing-v0/guide.svg",
+  "layers": [
+    {"file": "legs.png", "node": "Body/Legs", "index": 0, "z": 0, "rest_offset": [0, 0]},
+    {"file": "arm_fret.png", "node": "Body/Torso/Rig/ArmFret", "index": 1, "z": 1, "rest_offset": [-63, 21]},
+    {"file": "body_core.png", "node": "Body/Torso/Rig/Core", "index": 0, "z": 2, "rest_offset": [0, 0]},
+    {"file": "guitar.png", "node": "Body/Torso/Rig/Guitar", "index": 2, "z": 3, "rest_offset": [0, 0]},
+    {"file": "hand_fret.png", "node": "Body/Torso/Rig/Fingers", "index": 3, "z": 4, "rest_offset": [-63, 21]},
+    {"file": "arm_strum.png", "node": "Body/Torso/Rig/ArmStrum", "index": 4, "z": 4, "rest_offset": [0, 0]},
+    {"file": "strum_sleeve.png", "node": "Body/Torso/Rig/Cuff", "index": 5, "z": 5, "rest_offset": [0, 0]}
+  ],
+  "landmarks": {
+    "feet_origin": [350, 900],
+    "torso_pivot": [355, 560],
+    "strum_elbow": [240, 410],
+    "strum_pin_guide": [240, 389]
+  },
+  "landmark_tolerance_px": 4,
+  "landmark_note": "These are rig coordinates, not automatically detected anatomical features. Measure attachment compatibility in the editable; feet_origin is the rig origin, not either shoe center. strum_pin_guide lies on the zero-deformation y boundary.",
+  "geometry_policy": "Reskin or redraw the same registered parts. Keep attachment zones, shared canvas, hand/instrument contact and offsets. An overall scaled instance is possible; changed limb proportions or contact geometry need an adapted family, not independently stretched pieces.",
+  "construction_prompt": "Use the assembled neutral construction reference to preserve pose, body scale and instrument contact. Begin with the supplied registered layer files in the editor. Apply the new identity/clothing as local edits or redraws on those layers. Keep sleeve attachment, strum elbow, hip pivot and fretting-hand/neck contact aligned. Preserve canvas and layer origins. Static hair/clothing silhouettes may change if they do not expose seams or collide with the instrument. Reuse the guitar geometry for a guitar skin; a differently shaped instrument must preserve grip contacts or receive its own contract. The raw fretting arm and fingers receive the same runtime offset; do not bake that offset into their PNGs. Validate all three grips and both strum extremes. Produce a new assembly for review, not seven independently generated body parts.",
+  "source_scene": "game/characters/protagonist/protagonist.tscn"
+}

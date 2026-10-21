@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clicker Band · fondos"
+  short_description: "Escenarios vacíos con estilo y cámara compartidos"
+  default_prompt: "Usa $clicker-background para preparar un fondo vacío con las referencias, paleta y cámara de Clicker Band."

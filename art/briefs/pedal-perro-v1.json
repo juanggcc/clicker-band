@@ -1,0 +1,27 @@
+{
+  "id": "pedal-perro-v1",
+  "kind": "floor-prop-and-shop-icon",
+  "subject": "Yellow guitar distortion stompbox inspired by the supplied Adventure Time pedal, translated into Clicker Band's provisional world and UI families.",
+  "identity": ["Amber yellow compact metal enclosure", "Three charcoal knobs in a triangle", "Simple dog face print between knobs and switch", "Silver footswitch", "Small cream-and-blue adventurer sticker near the lower-right corner", "Small mint status LED"],
+  "world": {
+    "target": "game/assets/props/pedal.png",
+    "canvas": [512, 384],
+    "max_visible_art": [432, 288],
+    "ground_anchor": [256, 336],
+    "display_scale": 0.3,
+    "suggested_world_anchor": [1015, 1010],
+    "pose": "Flat on the ground, low three-quarter view from above, visibly foreshortened top plate, matching the bedroom/park stage camera. No painted ground or shadow."
+  },
+  "shop": {
+    "target": "game/assets/ui/shop/v1/pedal_upgrade_v2.png",
+    "canvas": [512, 512],
+    "max_visible_art": [400, 448],
+    "pose": "Near-frontal upright catalog view; illustrated pixel finish like pick_upgrade.png. Existing placeholder pedal_upgrade.png is preserved."
+  },
+  "references": [
+    {"path": "inputs/reference-pedal.png", "role": "Identity and hardware layout"},
+    {"path": "inputs/world-character.png", "role": "World illustration finish, outline and materials only"},
+    {"path": "inputs/shop-pick.png", "role": "Shop illustrated pixel finish and palette only"}
+  ],
+  "constraints": ["Real transparency", "No lettering, brands, watermark or panel", "One pedal per sprite", "Same identity in both versions", "No long cable or baked contact shadow", "No change to economy or purchase behavior"]
+}

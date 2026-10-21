@@ -2,7 +2,7 @@
 
 Integración: 21 de octubre de 2026. Tempo confirmado por Juan: **120 BPM en los tres estados**.
 
-| Original en `loop-exports/` | Archivo del juego en `game/audio/stems/` | Estado |
+| Original en `workspace/loops/` | Archivo del juego en `game/audio/stems/` | Estado |
 | --- | --- | --- |
 | `guitar_loop_01.wav` | `slow.wav` | Reposo |
 | `guitar_loop_02.wav` | `mid.wav` | Normal |
@@ -10,7 +10,7 @@ Integración: 21 de octubre de 2026. Tempo confirmado por Juan: **120 BPM en los
 
 `guitar_loop_02.wav` se volvió a exportar corregido y sustituye a `mid.wav`.
 
-| Original en `loop-exports/` | Archivo del juego en `game/audio/stems/` | Parte |
+| Original en `workspace/loops/` | Archivo del juego en `game/audio/stems/` | Parte |
 | --- | --- | --- |
 | `bass_loop_01..03.wav` | `bandmate_slow/mid/fast.wav` | Bajo de Ren (`bass_stems`) |
 | `drum_loop_01..03.wav` | `drums_slow/mid/fast.wav` | Batería de Cham (`drum_stems`) |

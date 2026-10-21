@@ -1,0 +1,36 @@
+{
+  "id": "drummer-pilot",
+  "kind": "character",
+  "subject": "Seated drummer derived from the user's illustrated bearded cap-wearing character, with the central man's photographic facial proportions. Two clothing variants for user selection: black cap with loose red T-shirt, dark loose trousers and taupe shoes; light blue-grey shirt buttoned to the collar, red cap perched high, olive crossbody bag and dark loose trousers. Also produce a separate compact right-handed four-piece drum kit with snare behind kick, one rack tom, floor tom, hi-hat and crash/ride.",
+  "composition": "Establish a NEW draft drummer-seated-v0 construction, separate from the standing guitarist. Shared target canvas 800x1000, ground/origin (400,920), nearly frontal three-quarter stage camera with visible drum heads. Isolated kit and isolated fully drawn seated musician variants. Uniform registration only. First visual proposal for human review; articulated cutout production follows the chosen outfit.",
+  "lighting": "Soft warm upper-right light, broad cel shadows, no baked ground shadow.",
+  "must_keep": [
+    "Bearded illustrated identity refined with supplied photos",
+    "Same character, seated anatomy, pose and scale in both outfits",
+    "Kit separate from musician; transparent PNG masters",
+    "Shoulder-elbow-wrist and hip-knee-ankle joint plan",
+    "Right foot on kick pedal, left foot on hi-hat pedal",
+    "Compact four-piece kit; snare behind kick; depth overlap for five-member mobile composition",
+    "No inherited standing-guitar geometry or limb stretching",
+    "Deliver a review version before final rig integration",
+    "Original cartoon face with only a slightly rounder chin; no photographic facial rendering"
+  ],
+  "references": [
+    {
+      "path": "art/anchors/drummer-v0/illustrated-identity.png",
+      "role": "identity and illustration finish; change clothing and seated construction"
+    },
+    {
+      "path": "workspace/references/anchors/drummer-v0/photo-black-cap.png",
+      "role": "facial identity, black cap, loose red shirt and trouser volume"
+    },
+    {
+      "path": "workspace/references/anchors/drummer-v0/photo-red-cap.png",
+      "role": "central man only: facial proportions, red perched cap, closed collar and olive bag"
+    },
+    {
+      "path": "art/templates/guitar-standing-v1/assembly.png",
+      "role": "existing game finish and relative human scale only; do not reuse standing pose"
+    }
+  ]
+}

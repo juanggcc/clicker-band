@@ -1,0 +1,17 @@
+{
+  "id": "protagonist-cutout-v2",
+  "scope": "Existing standing guitarist only; other proportions or instruments may need a new family contract.",
+  "canvas": [700, 900],
+  "format": "PNG RGBA, sRGB, straight alpha, antialiased illustration edges allowed",
+  "required_files": ["master.png", "legs.png", "body_core.png", "guitar.png", "arm_fret.png", "hand_fret.png", "arm_strum.png", "strum_sleeve.png"],
+  "legacy_not_used_by_current_scene": ["torso.png", "head.png", "arm_strum_up.png"],
+  "shared_canvas": true,
+  "runtime_scene": "game/characters/protagonist/protagonist.tscn",
+  "drawing_origin": [0, 0],
+  "runtime_feet_origin": [350, 900],
+  "torso_pivot": [355, 560],
+  "z_order_back_to_front": ["legs", "arm_fret", "body_core", "guitar", "hand_fret", "arm_strum", "strum_sleeve"],
+  "fret": {"shared_offsets_for_arm_and_fingers": [[-63, 21], [-83, 28], [-103, 35]], "beats_per_grip": 4},
+  "strum": {"mesh_rect_xywh": [210, 345, 195, 190], "elbow": [240, 410], "weight_smoothstep_y": [389, 431], "max_amplitude_rad": 0.18},
+  "qa": ["All pieces retain the full shared canvas", "Check sleeve overlap at both stroke extremes", "Check fingers over the neck at all three grips", "Foot placement remains stable", "Compare at mobile display size and with HUD", "Do not infer musical chord accuracy from the three visual grips"]
+}

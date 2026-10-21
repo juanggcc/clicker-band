@@ -1,0 +1,7 @@
+{
+  "id": "bass-sg",
+  "profile": "bass",
+  "subject": "Bajo SG burdeos de cuatro cuerdas basado en la foto, con cuerpo equilibrado y mástil largo.",
+  "must_keep": ["Contorno SG centrado y simétrico", "Puente, pastilla, pegatina, pastilla y mástil, en ese orden", "Dos pastillas cromadas distintas", "Pegatina circular verde amarillenta de tres ojos", "Cuatro cuerdas rectas y cuatro clavijas", "Golpeador negro y distribución de mandos de la foto"],
+  "references": [{"path": "workspace/art-jobs/bajo-sg-v02/inputs/bass-photo-detail.png", "role": "instrument identity and exact hardware layout"}]
+}

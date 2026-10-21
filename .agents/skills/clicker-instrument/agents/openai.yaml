@@ -1,0 +1,4 @@
+interface:
+  display_name: "Instrumentos de Clicker Band"
+  short_description: "Crear guitarras y bajos con tamaño y encaje comunes"
+  default_prompt: "Usa $clicker-instrument para crear este instrumento con su perfil, registrar puente y cejuela y comprobar las seis poses del músico."

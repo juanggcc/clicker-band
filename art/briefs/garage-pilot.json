@@ -1,0 +1,9 @@
+{
+  "id": "garage-pilot",
+  "kind": "background",
+  "subject": "A modest Spanish indie band's rehearsal garage, adapted from an ordinary domestic space.",
+  "composition": "Fixed stage view. Free foreground floor for up to three standing musicians. Keep the protagonist position at image (1000,1000) unobstructed. Storage and cables remain at the back and edges. No painted amps, drums or other upgradeable equipment; these will be separate props.",
+  "lighting": "Warm practical light from the upper right, muted slate shadows, restrained texture matching the reference finish.",
+  "must_keep": ["Empty musician area", "Central 16:9 safe crop", "Quiet HUD corners", "Character-compatible scale", "Opaque export"],
+  "references": []
+}
