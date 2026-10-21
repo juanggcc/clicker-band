@@ -1,0 +1,96 @@
+[gd_scene load_steps=37 format=3]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://audio/music_player.gd" id="2_music"]
+[ext_resource type="AudioStream" path="res://audio/stems/slow.wav" id="3_slow"]
+[ext_resource type="AudioStream" path="res://audio/stems/mid.wav" id="4_mid"]
+[ext_resource type="AudioStream" path="res://audio/stems/fast.wav" id="5_fast"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bedroom.png" id="6_bedroom"]
+[ext_resource type="PackedScene" path="res://characters/protagonist/protagonist.tscn" id="7_protagonist"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="8_hud"]
+[ext_resource type="PackedScene" path="res://ui/shop_menu.tscn" id="9_shop"]
+[ext_resource type="PackedScene" path="res://ui/options_menu.tscn" id="10_options"]
+[ext_resource type="PackedScene" path="res://ui/calibration_menu.tscn" id="11_calibration"]
+[ext_resource type="AudioStream" path="res://audio/stems/bandmate_slow.wav" id="12_band_slow"]
+[ext_resource type="AudioStream" path="res://audio/stems/bandmate_mid.wav" id="13_band_mid"]
+[ext_resource type="AudioStream" path="res://audio/stems/bandmate_fast.wav" id="14_band_fast"]
+[ext_resource type="PackedScene" path="res://characters/cowboy/cowboy.tscn" id="15_cowboy"]
+[ext_resource type="Script" path="res://world/zone.gd" id="16_zone"]
+[ext_resource type="Resource" path="res://world/zones/bedroom.tres" id="17_bedroom"]
+[ext_resource type="Resource" path="res://world/zones/park.tres" id="18_park"]
+[ext_resource type="Resource" path="res://world/zones/garage.tres" id="19_garage"]
+[ext_resource type="Resource" path="res://world/zones/el_sol.tres" id="20_el_sol"]
+[ext_resource type="Resource" path="res://world/zones/stadium.tres" id="21_stadium"]
+[ext_resource type="PackedScene" path="res://ui/main_menu.tscn" id="22_main_menu"]
+[ext_resource type="PackedScene" path="res://ui/map_menu.tscn" id="23_map"]
+[ext_resource type="PackedScene" path="res://ui/join_dialog.tscn" id="24_join"]
+[ext_resource type="PackedScene" path="res://ui/travel_fade.tscn" id="25_fade"]
+[ext_resource type="Script" path="res://shop/shop_item.gd" id="26_shop_item"]
+[ext_resource type="Resource" path="res://shop/items/pick.tres" id="27_pick"]
+[ext_resource type="Resource" path="res://shop/items/pedal.tres" id="28_pedal"]
+[ext_resource type="PackedScene" path="res://props/guitar_pedal.tscn" id="29_pedal_prop"]
+[ext_resource type="AudioStream" path="res://audio/sfx/buy.wav" id="30_buy"]
+[ext_resource type="PackedScene" path="res://characters/drummer_v2/drummer_v2.tscn" id="31_drummer"]
+[ext_resource type="AudioStream" path="res://audio/stems/drums_slow.wav" id="32_drums_slow"]
+[ext_resource type="AudioStream" path="res://audio/stems/drums_mid.wav" id="33_drums_mid"]
+[ext_resource type="AudioStream" path="res://audio/stems/drums_fast.wav" id="34_drums_fast"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+zones = Array[ExtResource("16_zone")]([ExtResource("17_bedroom"), ExtResource("18_park"), ExtResource("19_garage"), ExtResource("20_el_sol"), ExtResource("21_stadium")])
+shop_items = Array[ExtResource("26_shop_item")]([ExtResource("27_pick"), ExtResource("28_pedal")])
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -6.0
+script = ExtResource("2_music")
+stems = Array[AudioStream]([ExtResource("3_slow"), ExtResource("4_mid"), ExtResource("5_fast")])
+bass_stems = Array[AudioStream]([ExtResource("12_band_slow"), ExtResource("13_band_mid"), ExtResource("14_band_fast")])
+drum_stems = Array[AudioStream]([ExtResource("32_drums_slow"), ExtResource("33_drums_mid"), ExtResource("34_drums_fast")])
+
+[node name="BuySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_buy")
+volume_db = -8.0
+max_polyphony = 6
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Camera" type="Camera2D" parent="World"]
+position = Vector2(960, 540)
+
+[node name="Background" type="Sprite2D" parent="World"]
+z_index = -30
+position = Vector2(960, 540)
+texture = ExtResource("6_bedroom")
+
+[node name="Cham" parent="World" instance=ExtResource("31_drummer")]
+visible = false
+z_index = -20
+position = Vector2(1040, 895)
+scale = Vector2(0.8, 0.8)
+
+[node name="Protagonist" parent="World" instance=ExtResource("7_protagonist")]
+position = Vector2(760, 1000)
+
+[node name="Pedal" parent="World" instance=ExtResource("29_pedal_prop")]
+visible = false
+position = Vector2(1015, 1010)
+
+[node name="Ren" parent="World" instance=ExtResource("15_cowboy")]
+visible = false
+position = Vector2(1420, 1000)
+
+[node name="HUD" parent="." instance=ExtResource("8_hud")]
+
+[node name="ShopMenu" parent="." instance=ExtResource("9_shop")]
+
+[node name="OptionsMenu" parent="." instance=ExtResource("10_options")]
+
+[node name="CalibrationMenu" parent="." instance=ExtResource("11_calibration")]
+
+[node name="MainMenu" parent="." instance=ExtResource("22_main_menu")]
+
+[node name="MapMenu" parent="." instance=ExtResource("23_map")]
+
+[node name="JoinDialog" parent="." instance=ExtResource("24_join")]
+
+[node name="TravelFade" parent="." instance=ExtResource("25_fade")]

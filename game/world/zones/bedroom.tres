@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Zone" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://world/zone.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bedroom.png" id="2_background"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"bedroom"
+eyebrow = "LOCAL DE ENSAYO"
+title = "Tu cuarto"
+blurb = "Acústica de armario. Tu público: tu madre pidiendo que bajes eso."
+background = ExtResource("2_background")
+bassist_position = Vector2(1420, 1000)
+drummer_position = Vector2(1090, 895)

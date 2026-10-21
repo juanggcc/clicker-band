@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://shop/shop_item.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/pick_upgrade.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"pick"
+title = "Púa de ensayo"
+short_name = "Púa"
+description = "Un ataque más preciso. Más por cada toque."
+art = ExtResource("2_art")
+base_cost = 25
+growth = 1.5
+gain = 1

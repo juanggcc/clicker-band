@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://ui/zone_card.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/item_frame.png" id="2_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/item_slot.png" id="3_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_lock.png" id="4_lock"]
+[ext_resource type="Texture2D" path="res://assets/ui/map/v1/icon_pin.png" id="5_pin"]
+
+[sub_resource type="StyleBoxTexture" id="Style_card"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("2_frame")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id="Style_slot"]
+content_margin_left = 9.0
+content_margin_top = 9.0
+content_margin_right = 9.0
+content_margin_bottom = 9.0
+texture = ExtResource("3_slot")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[node name="ZoneCard" type="PanelContainer"]
+custom_minimum_size = Vector2(432, 0)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_card")
+script = ExtResource("1_script")
+
+[node name="Box" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Slot" type="PanelContainer" parent="Box"]
+custom_minimum_size = Vector2(384, 216)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_slot")
+
+[node name="Picture" type="TextureRect" parent="Box/Slot"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Unknown" type="Label" parent="Box/Slot"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.322, 0.376, 0.42, 1)
+theme_override_font_sizes/font_size = 80
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lock" type="TextureRect" parent="Box/Slot"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+texture = ExtResource("4_lock")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Box"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 40
+text = "TU CUARTO"
+
+[node name="Blurb" type="Label" parent="Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 96)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 24
+text = "Acústica de armario."
+autowrap_mode = 3
+
+[node name="Here" type="HBoxContainer" parent="Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Pin" type="TextureRect" parent="Box/Here"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("5_pin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Box/Here"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+text = "ESTÁS AQUÍ"
+
+[node name="Action" type="Button" parent="Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "IR"

@@ -1,0 +1,31 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://characters/protagonist/protagonist.tscn" id="1_base"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/legs.png" id="2_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/arm_fret.png" id="3_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/body_core.png" id="4_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/bass.png" id="5_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/hand_fret.png" id="6_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/arm_strum.png" id="7_texture"]
+[ext_resource type="Texture2D" path="res://assets/characters/cowboy/strum_sleeve.png" id="8_texture"]
+
+[node name="Guitarist" instance=ExtResource("1_base")]
+strum_texture = ExtResource("7_texture")
+
+[node name="Legs" parent="Body" index=0]
+texture = ExtResource("2_texture")
+
+[node name="ArmFret" parent="Body/Torso/Rig" index=1]
+texture = ExtResource("3_texture")
+
+[node name="Core" parent="Body/Torso/Rig" index=0]
+texture = ExtResource("4_texture")
+
+[node name="Guitar" parent="Body/Torso/Rig" index=2]
+texture = ExtResource("5_texture")
+
+[node name="Fingers" parent="Body/Torso/Rig" index=3]
+texture = ExtResource("6_texture")
+
+[node name="Cuff" parent="Body/Torso/Rig" index=5]
+texture = ExtResource("8_texture")

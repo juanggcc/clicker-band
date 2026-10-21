@@ -1,0 +1,134 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://ui/shop_row.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/item_frame.png" id="2_item"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/item_slot.png" id="3_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_lock.png" id="4_lock"]
+
+[sub_resource type="StyleBoxTexture" id="Style_item"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("2_item")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id="Style_slot"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("3_slot")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxFlat" id="Style_benefit"]
+content_margin_left = 18.0
+content_margin_top = 6.0
+content_margin_right = 18.0
+content_margin_bottom = 6.0
+bg_color = Color(0.067, 0.098, 0.137, 1)
+border_width_left = 3
+border_color = Color(0.557, 0.847, 0.694, 1)
+
+[node name="ShopRow" type="PanelContainer"]
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_item")
+script = ExtResource("1_script")
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="Slot" type="PanelContainer" parent="Row"]
+custom_minimum_size = Vector2(162, 162)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_slot")
+
+[node name="Art" type="TextureRect" parent="Row/Slot"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Lock" type="TextureRect" parent="Row/Slot"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("4_lock")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info" type="VBoxContainer" parent="Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="TitleRow" type="HBoxContainer" parent="Row/Info"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="Name" type="Label" parent="Row/Info/TitleRow"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 40
+text = "PÚA DE ENSAYO"
+
+[node name="Level" type="Label" parent="Row/Info/TitleRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 24
+text = "NIVEL 0"
+
+[node name="Description" type="Label" parent="Row/Info"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 24
+text = "Un ataque más preciso."
+autowrap_mode = 3
+
+[node name="Benefit" type="PanelContainer" parent="Row/Info"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_benefit")
+
+[node name="Effect" type="Label" parent="Row/Info/Benefit"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_font_sizes/font_size = 24
+text = "+1 € / TOQUE POR NIVEL"
+
+[node name="BuyButton" type="Button" parent="Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "25 €"
+icon_alignment = 2

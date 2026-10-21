@@ -1,0 +1,165 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://ui/shop_menu.gd" id="1_script"]
+[ext_resource type="Theme" path="res://assets/ui/shop/v1/shop_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_shop_active.png" id="3_shop"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_close.png" id="4_close"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_coin.png" id="5_coin"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/button_secondary.png" id="9_secondary"]
+
+[sub_resource type="StyleBoxTexture" id="Style_secondary"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+texture = ExtResource("9_secondary")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[node name="ShopMenu" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0.035, 0.055, 0.078, 0.72)
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+theme = ExtResource("2_theme")
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 96
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 96
+
+[node name="Panel" type="PanelContainer" parent="Margin"]
+custom_minimum_size = Vector2(1068, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 0
+
+[node name="Box" type="VBoxContainer" parent="Margin/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="Header" type="VBoxContainer" parent="Margin/Panel/Box"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 9
+
+[node name="TitleRow" type="HBoxContainer" parent="Margin/Panel/Box/Header"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="ShopIcon" type="TextureRect" parent="Margin/Panel/Box/Header/TitleRow"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("3_shop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Margin/Panel/Box/Header/TitleRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_font_sizes/font_size = 60
+text = "TIENDA"
+
+[node name="CloseButton" type="Button" parent="Margin/Panel/Box/Header/TitleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_colors/icon_pressed_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_styles/normal = SubResource("Style_secondary")
+theme_override_styles/hover = SubResource("Style_secondary")
+theme_override_styles/pressed = SubResource("Style_secondary")
+icon = ExtResource("4_close")
+
+[node name="InfoRow" type="HBoxContainer" parent="Margin/Panel/Box/Header"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="Subtitle" type="Label" parent="Margin/Panel/Box/Header/InfoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+text = "AFINA TU EQUIPO"
+
+[node name="Coin" type="TextureRect" parent="Margin/Panel/Box/Header/InfoRow"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("5_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Balance" type="Label" parent="Margin/Panel/Box/Header/InfoRow"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.957, 0.792, 0.471, 1)
+theme_override_font_sizes/font_size = 40
+text = "0 €"
+horizontal_alignment = 2
+
+[node name="Rule" type="ColorRect" parent="Margin/Panel/Box"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.322, 0.376, 0.42, 1)
+
+[node name="Category" type="HBoxContainer" parent="Margin/Panel/Box"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Margin/Panel/Box/Category"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+text = "MEJORAS"
+
+[node name="Count" type="Label" parent="Margin/Panel/Box/Category"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+text = "01"
+
+[node name="Rows" type="VBoxContainer" parent="Margin/Panel/Box"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="Hint" type="Label" parent="Margin/Panel/Box"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 24
+text = "LA MEJORA SE APLICA A CADA TOQUE."

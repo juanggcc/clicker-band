@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ShopItem" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://shop/shop_item.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/pedal_upgrade_v2.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"pedal"
+title = "Pedal de distorsión"
+short_name = "Pedal"
+description = "Más ruido, más propinas. Tu madre no opina igual."
+art = ExtResource("2_art")
+base_cost = 1200
+growth = 1.35
+gain = 5
+requires_item = &"pick"
+requires_level = 10

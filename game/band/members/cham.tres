@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Bandmate" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://band/bandmate.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/characters/drummer-v2/portrait.png" id="2_portrait"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"cham"
+name = "Cham"
+line = "¿Eso es un cuatro por cuatro? Soy Cham. Mis vecinos ya no me dejan ensayar, pero aquí cabe mi batería. ¿Me subo?"
+effect = "TOCA LA BATERÍA CONTIGO"
+portrait = ExtResource("2_portrait")

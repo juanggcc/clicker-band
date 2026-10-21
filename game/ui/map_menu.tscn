@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://ui/map_menu.gd" id="1_script"]
+[ext_resource type="Theme" path="res://assets/ui/shop/v1/shop_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/button_secondary.png" id="3_secondary"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_close.png" id="4_close"]
+[ext_resource type="Texture2D" path="res://assets/ui/menu/v1/icon_map.png" id="5_map"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_coin.png" id="6_coin"]
+
+[sub_resource type="StyleBoxTexture" id="Style_secondary"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+texture = ExtResource("3_secondary")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[node name="MapMenu" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.035, 0.055, 0.078, 0.72)
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+theme = ExtResource("2_theme")
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 72
+
+[node name="Panel" type="PanelContainer" parent="Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 0
+
+[node name="Box" type="VBoxContainer" parent="Margin/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="TitleRow" type="HBoxContainer" parent="Margin/Panel/Box"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="MapIcon" type="TextureRect" parent="Margin/Panel/Box/TitleRow"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("5_map")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Margin/Panel/Box/TitleRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_font_sizes/font_size = 60
+text = "MAPA"
+
+[node name="Coin" type="TextureRect" parent="Margin/Panel/Box/TitleRow"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("6_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Balance" type="Label" parent="Margin/Panel/Box/TitleRow"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.957, 0.792, 0.471, 1)
+theme_override_font_sizes/font_size = 40
+text = "0 €"
+
+[node name="CloseButton" type="Button" parent="Margin/Panel/Box/TitleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_colors/icon_pressed_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_styles/normal = SubResource("Style_secondary")
+theme_override_styles/hover = SubResource("Style_secondary")
+theme_override_styles/pressed = SubResource("Style_secondary")
+icon = ExtResource("4_close")
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/Panel/Box"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+vertical_scroll_mode = 0
+
+[node name="Cards" type="HBoxContainer" parent="Margin/Panel/Box/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 24

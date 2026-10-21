@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://art_lab/guitar_comparison.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://characters/protagonist/protagonist.tscn" id="2_original"]
+[ext_resource type="PackedScene" path="res://characters/cowboy/cowboy.tscn" id="3_cowboy"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bedroom.png" id="4_background"]
+[ext_resource type="FontFile" path="res://assets/fonts/silkscreen/Silkscreen-Regular.ttf" id="5_font"]
+[ext_resource type="Theme" path="res://ui/pixel_theme.tres" id="6_theme"]
+
+[sub_resource type="StyleBoxEmpty" id="ControlsPanel"]
+content_margin_left = 12.0
+content_margin_top = 4.0
+content_margin_right = 12.0
+content_margin_bottom = 4.0
+
+[node name="GuitarComparison" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("4_background")
+modulate = Color(0.68, 0.72, 0.78, 1)
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Protagonist" parent="." instance=ExtResource("2_original")]
+position = Vector2(480, 1000)
+
+[node name="Cowboy" parent="." instance=ExtResource("3_cowboy")]
+position = Vector2(1240, 1000)
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+[node name="OriginalTitle" type="Label" parent="Controls"]
+offset_left = 160.0
+offset_top = 48.0
+offset_right = 800.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 28
+text = "PROTAGONISTA · CUELLO CORREGIDO"
+horizontal_alignment = 1
+
+[node name="CowboyTitle" type="Label" parent="Controls"]
+offset_left = 920.0
+offset_top = 48.0
+offset_right = 1560.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 28
+text = "SOMBRERO ROSA · SPRITES DE PRUEBA"
+horizontal_alignment = 1
+
+[node name="Panel" type="PanelContainer" parent="Controls"]
+offset_left = 560.0
+offset_top = 1008.0
+offset_right = 1360.0
+offset_bottom = 1078.0
+theme = ExtResource("6_theme")
+theme_override_styles/panel = SubResource("ControlsPanel")
+
+[node name="Row" type="HBoxContainer" parent="Controls/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Pause" type="Button" parent="Controls/Panel/Row"]
+custom_minimum_size = Vector2(240, 56)
+layout_mode = 2
+text = "PAUSAR"
+theme_override_font_sizes/font_size = 26
+
+[node name="Level" type="OptionButton" parent="Controls/Panel/Row"]
+custom_minimum_size = Vector2(240, 56)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 28
+
+[node name="Hint" type="Label" parent="Controls/Panel/Row"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 18
+text = "ESPACIO: PAUSA\n1/2/3: INTENSIDAD"
+vertical_alignment = 1

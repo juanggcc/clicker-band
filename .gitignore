@@ -1,0 +1,32 @@
+# Godot
+game/.godot/
+game/android/
+game/*.tmp
+
+# macOS
+.DS_Store
+
+# Local art tools
+.venv-art/
+tools/art/node_modules/
+__pycache__/
+
+# Exploration material from before v1 (stays on disk, not in the repo)
+mockups/
+references/
+output/
+
+# Web export (served to phones for testing, never committed)
+build/
+
+# Art pipeline: jobs, sources, review material and original loops stay on disk, not in
+# the repo; the game only needs what is already exported into game/
+art/
+.agents/
+tools/art/
+docs/art/
+loop-exports/
+
+# Android export (export_presets.cfg writes it to the repo root)
+*.apk
+*.apk.idsig

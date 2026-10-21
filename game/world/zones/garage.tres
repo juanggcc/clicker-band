@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Zone" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://world/zone.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/garage.png" id="2_background"]
+[ext_resource type="Texture2D" path="res://assets/ui/map/v1/zone_garage.png" id="3_thumbnail"]
+[ext_resource type="Texture2D" path="res://assets/ui/map/v1/icon_place_garage.png" id="4_icon"]
+[ext_resource type="Resource" path="res://band/members/cham.tres" id="5_cham"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"garage"
+eyebrow = "LOCAL DE ENSAYO"
+title = "El garaje"
+blurb = "Huele a gasolina y a sueños."
+price = 30000
+background = ExtResource("2_background")
+thumbnail = ExtResource("3_thumbnail")
+place_icon = ExtResource("4_icon")
+protagonist_position = Vector2(720, 1000)
+bassist_position = Vector2(1360, 1000)
+recruit = ExtResource("5_cham")
+requires_item = &"pedal"
+requires_level = 8

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/props/pedal.png" id="1_pedal"]
+
+[node name="GuitarPedal" type="Node2D"]
+
+[node name="ContactShadow" type="Polygon2D" parent="."]
+position = Vector2(0, 1)
+color = Color(0.10, 0.09, 0.09, 0.23)
+polygon = PackedVector2Array(-65, -56, 13, -72, 65, -16, -21, 0)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(-76.8, -120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_pedal")
+centered = false

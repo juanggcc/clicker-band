@@ -1,0 +1,337 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_script"]
+[ext_resource type="Theme" path="res://ui/pixel_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://ui/pixel_panel.gd" id="3_panel"]
+[ext_resource type="Script" path="res://ui/pixel_icon.gd" id="4_icon"]
+[ext_resource type="Script" path="res://ui/tempo_meter.gd" id="5_meter"]
+
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/icon_shop.png" id="6_shop"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/v1/panel_frame.png" id="7_frame"]
+[ext_resource type="Script" path="res://ui/bonus_meter.gd" id="8_bonus"]
+[ext_resource type="Script" path="res://ui/metronome_led.gd" id="9_metronome"]
+
+[sub_resource type="StyleBoxTexture" id="Style_shop"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+texture = ExtResource("7_frame")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id="Style_shop_hover"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+texture = ExtResource("7_frame")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+modulate_color = Color(1.15, 1.15, 1.15, 1)
+
+[sub_resource type="StyleBoxTexture" id="Style_shop_pressed"]
+content_margin_left = 18.0
+content_margin_top = 21.0
+content_margin_right = 18.0
+content_margin_bottom = 15.0
+texture = ExtResource("7_frame")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+modulate_color = Color(0.8, 0.9, 0.85, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+theme = ExtResource("2_theme")
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 24
+
+[node name="PlacePanel" type="PanelContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+script = ExtResource("3_panel")
+
+[node name="Row" type="HBoxContainer" parent="Margin/PlacePanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 21
+
+[node name="PlaceIcon" type="Control" parent="Margin/PlacePanel/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("4_icon")
+
+[node name="Copy" type="VBoxContainer" parent="Margin/PlacePanel/Row"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="PlaceEyebrow" type="Label" parent="Margin/PlacePanel/Row/Copy"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOCAL DE ENSAYO"
+
+[node name="PlaceTitle" type="Label" parent="Margin/PlacePanel/Row/Copy"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 50
+text = "Tu cuarto"
+
+[node name="MoneyPanel" type="PanelContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+script = ExtResource("3_panel")
+accent = Color(0.957, 0.792, 0.471, 1)
+
+[node name="Copy" type="VBoxContainer" parent="Margin/MoneyPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Eyebrow" type="Label" parent="Margin/MoneyPanel/Copy"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 30
+text = "GANANCIAS"
+horizontal_alignment = 2
+
+[node name="Row" type="HBoxContainer" parent="Margin/MoneyPanel/Copy"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="Icon" type="Control" parent="Margin/MoneyPanel/Copy/Row"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("4_icon")
+kind = 1
+color = Color(0.957, 0.792, 0.471, 1)
+
+[node name="Money" type="Label" parent="Margin/MoneyPanel/Copy/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.957, 0.792, 0.471, 1)
+theme_override_font_sizes/font_size = 60
+text = "0 €"
+horizontal_alignment = 2
+
+[node name="TempoPanel" type="PanelContainer" parent="Margin"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(570, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+script = ExtResource("3_panel")
+
+[node name="TempoBox" type="VBoxContainer" parent="Margin/TempoPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 9
+
+[node name="Header" type="HBoxContainer" parent="Margin/TempoPanel/TempoBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Metronome" type="Control" parent="Margin/TempoPanel/TempoBox/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("9_metronome")
+
+[node name="Title" type="Label" parent="Margin/TempoPanel/TempoBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 30
+text = "VELOCIDAD"
+
+[node name="Rate" type="Label" parent="Margin/TempoPanel/TempoBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 30
+text = "0,0 taps/s"
+horizontal_alignment = 2
+
+[node name="TierRow" type="HBoxContainer" parent="Margin/TempoPanel/TempoBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Tier" type="Label" parent="Margin/TempoPanel/TempoBox/TierRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_font_sizes/font_size = 60
+text = "INDIE"
+
+[node name="Loop" type="Label" parent="Margin/TempoPanel/TempoBox/TierRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.557, 0.847, 0.694, 1)
+theme_override_font_sizes/font_size = 30
+text = "LVL 1"
+horizontal_alignment = 2
+
+[node name="Progress" type="Range" parent="Margin/TempoPanel/TempoBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+mouse_filter = 2
+max_value = 10.0
+step = 0.0
+script = ExtResource("5_meter")
+
+[node name="BonusRow" type="HBoxContainer" parent="Margin/TempoPanel/TempoBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="BonusBar" type="Range" parent="Margin/TempoPanel/TempoBox/BonusRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+max_value = 1.0
+step = 0.0
+script = ExtResource("8_bonus")
+
+[node name="BonusLabel" type="Label" parent="Margin/TempoPanel/TempoBox/BonusRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.659, 0.706, 0.722, 1)
+theme_override_font_sizes/font_size = 24
+text = "A TEMPO"
+horizontal_alignment = 2
+
+[node name="Corner" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/separation = 18
+
+[node name="OptionsButton" type="Button" parent="Margin/Corner"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+size_flags_vertical = 8
+focus_mode = 0
+
+[node name="Icon" type="Control" parent="Margin/Corner/OptionsButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -36.0
+offset_right = 36.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_icon")
+kind = 3
+color = Color(0.965, 0.937, 0.859, 1)
+
+[node name="HomeButton" type="Button" parent="Margin/Corner"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(156, 168)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("Style_shop")
+theme_override_styles/hover = SubResource("Style_shop_hover")
+theme_override_styles/pressed = SubResource("Style_shop_pressed")
+
+[node name="Content" type="VBoxContainer" parent="Margin/Corner/HomeButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Margin/Corner/HomeButton/Content"]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+texture = ExtResource("6_shop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Margin/Corner/HomeButton/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+text = "MENÚ"
+horizontal_alignment = 1
+
+[node name="HomeAvailable" type="ColorRect" parent="Margin/Corner/HomeButton"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -27.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 21.0
+grow_horizontal = 0
+mouse_filter = 2
+color = Color(0.557, 0.847, 0.694, 1)
