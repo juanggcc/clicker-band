@@ -92,11 +92,13 @@ se los pasa al medidor al arrancar. El fondo de escala es `max_value` del nodo
   ganancia por toque, requisito y dibujo); el orden es la lista `shop_items` de Main.
   Ahora: púa 25 € ×1,5 (+1 €/toque) y pedal 1 200 € ×1,35 (+5 €/toque, pide púa
   NV 10). El parque pide pedal NV 5 y cuesta 8 000 €; el garaje, pedal NV 8 y 30 000 €.
-- **Pausa:** pausa todo el juego, música incluida. Sonido silencia el bus Master.
+- **Pausa:** pausa todo el juego, música incluida. El fader de SONIDO ajusta el bus
+  Master (lineal en amplitud: la mitad son −6 dB y abajo del todo silencia). Se guarda
+  al soltarlo en `user://settings.cfg` y se aplica al arrancar.
 - **Partida guardada:** `user://save.cfg` (dinero, niveles, zonas, zona actual e
   integrantes). Se guarda al comprar, al cambiar de zona, al unirse alguien, cada 10 s y
   al pasar la app a segundo plano o salir. Borrar partida, en la pausa, pide un
-  segundo toque y no toca la calibración (`settings.cfg`).
+  segundo toque y no toca la calibración ni el volumen (`settings.cfg`).
 - **Atrás (Android):** cierra el menú abierto o abre la pausa; ya no cierra el juego.
 - **Ajustar ritmo:** desde la pausa. El juego sigue parado y solo suena la música,
   siempre en el loop 1. Se toca en cada pulso (negras) en cualquier punto de la

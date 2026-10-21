@@ -5,7 +5,6 @@ extends Node2D
 ## At 120 BPM: once a second (half notes), eighth notes, sixteenth notes.
 const STRUMS_PER_BEAT: Array[float] = [0.5, 2.0, 4.0]
 const INTENSITY: Array[float] = [0.3, 0.65, 1.0]
-const SETTINGS_PATH: String = "user://settings.cfg"
 ## TEMPORARY, for playtesting: start rich and have Ren and Cham turn up within a few dozen
 ## taps in the park and the garage, without loading or saving progress. Set PLAYTEST to
 ## false before exporting a build for friends.
@@ -33,6 +32,9 @@ const CHAM: StringName = &"cham"
 @export var shop_items: Array[ShopItem] = []
 ## Where progress is kept; tests point this at their own file.
 @export var save_path: String = "user://save.cfg"
+## Where the rhythm calibration and the volume are kept, apart from progress so erasing
+## the game keeps them; tests point this at their own file.
+@export var settings_path: String = "user://settings.cfg"
 
 @onready var _music: MusicPlayer = $MusicPlayer
 @onready var _buy_sound: AudioStreamPlayer = $BuySound
@@ -86,8 +88,10 @@ func _ready() -> void:
 	_options.quit_pressed.connect(_quit)
 	_calibration.music = _music
 	_calibration.saved.connect(_on_calibration_saved)
+	_options.volume_set.connect(_save_setting.bind("audio", "volume"))
 	_calibration.closed.connect(_close_calibration)
-	_bonus.tap_offset = _load_tap_offset()
+	_bonus.tap_offset = _load_setting("rhythm", "tap_offset_sec", 0.0)
+	_options.set_volume(_load_setting("audio", "volume", 1.0))
 	_hud.show_thresholds(_tiers.mid_rate, _tiers.fast_rate)
 	_show_zone(_current_zone())
 	_show_band()
@@ -284,18 +288,23 @@ func _close_calibration() -> void:
 
 func _on_calibration_saved(offset: float) -> void:
 	_bonus.tap_offset = offset
-	var settings: ConfigFile = ConfigFile.new()
-	settings.load(SETTINGS_PATH)
-	settings.set_value("rhythm", "tap_offset_sec", offset)
-	if settings.save(SETTINGS_PATH) != OK:
-		push_error("Could not save the tap offset to " + SETTINGS_PATH)
+	_save_setting(offset, "rhythm", "tap_offset_sec")
 
 
-## What the player's last calibration measured; 0 until they run one.
-func _load_tap_offset() -> float:
+## The stored setting, or default until the player first sets it.
+func _load_setting(section: String, key: String, default: Variant) -> Variant:
 	var settings: ConfigFile = ConfigFile.new()
-	settings.load(SETTINGS_PATH)
-	return settings.get_value("rhythm", "tap_offset_sec", 0.0)
+	settings.load(settings_path)
+	return settings.get_value(section, key, default)
+
+
+## value comes first so a signal's argument can be bound to section and key.
+func _save_setting(value: Variant, section: String, key: String) -> void:
+	var settings: ConfigFile = ConfigFile.new()
+	settings.load(settings_path)
+	settings.set_value(section, key, value)
+	if settings.save(settings_path) != OK:
+		push_error("Could not save %s/%s to %s" % [section, key, settings_path])
 
 
 func _zone_ids() -> Array[StringName]:
@@ -318,7 +327,7 @@ func _quit() -> void:
 	get_tree().quit()
 
 
-## Wipes the saved progress and starts over; the rhythm calibration is kept.
+## Wipes the saved progress and starts over; the calibration and the volume are kept.
 func _reset_progress() -> void:
 	_save.erase()
 	get_tree().paused = false

@@ -7,6 +7,7 @@ var _checks: int = 0
 var _failures: int = 0
 var _capture: bool = "--capture" in OS.get_cmdline_user_args()
 const SAVE_PATH: String = "user://ui_test_save.cfg"
+const SETTINGS_PATH: String = "user://ui_test_settings.cfg"
 
 
 func _initialize() -> void:
@@ -65,9 +66,13 @@ func _run() -> void:
 	root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_EXPAND
 	SaveGame.new(SAVE_PATH).erase()
+	var settings: ConfigFile = ConfigFile.new()
+	settings.set_value("audio", "volume", 0.5)
+	settings.save(SETTINGS_PATH)
 	var game: Node = load("res://main/main.tscn").instantiate()
-	# Never load or overwrite the player's own progress.
+	# Never load or overwrite the player's own progress or settings.
 	game.set("save_path", SAVE_PATH)
+	game.set("settings_path", SETTINGS_PATH)
 	root.add_child(game)
 	# Keep tap times deterministic; timers and controls still process normally.
 	game.set_process(false)
@@ -158,6 +163,20 @@ func _run() -> void:
 	await click((hud.get_node("%OptionsButton") as Button).get_global_rect().get_center())
 	check(options.visible and paused, "existing pause menu remains functional")
 
+	var fader: PixelFader = options.get_node("%VolumeFader") as PixelFader
+	check(fader.value == 50.0 and is_equal_approx(AudioServer.get_bus_volume_db(0), linear_to_db(0.5)), "the saved volume is loaded at start")
+	var slot: Rect2 = fader.get_global_rect()
+	var travel: float = slot.size.x - PixelFader.CAP.x
+	await click(Vector2(slot.position.x + PixelFader.CAP.x / 2.0 + travel * 0.75, slot.get_center().y))
+	check(absf(AudioServer.get_bus_volume_db(0) - linear_to_db(0.75)) < 0.2 and not AudioServer.is_bus_mute(0), "the fader sets the Master volume where it is touched")
+	settings.load(SETTINGS_PATH)
+	check(is_equal_approx(settings.get_value("audio", "volume", 0.0), 0.75), "the volume is saved once the fader is let go")
+	await click(Vector2(slot.position.x + 3.0, slot.get_center().y))
+	check(fader.value == 0.0 and AudioServer.is_bus_mute(0), "all the way down mutes the game")
+	await click(Vector2(slot.end.x - 3.0, slot.get_center().y))
+	check(fader.value == 100.0 and not AudioServer.is_bus_mute(0), "back up, it sounds again")
+	await capture("pause-volume")
+
 	var music: MusicPlayer = game.get_node("MusicPlayer") as MusicPlayer
 	var calibration: CalibrationMenu = game.get_node("CalibrationMenu") as CalibrationMenu
 	var count: Label = calibration.get_node("%Count") as Label
@@ -200,5 +219,6 @@ func _run() -> void:
 	game.queue_free()
 	await settle()
 	SaveGame.new(SAVE_PATH).erase()
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(SETTINGS_PATH))
 	print("UI integration: %d checks, %d failures" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
